@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="1101.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EcomCalnController">
+   <children>
+      <ToolBar layoutY="1.0" prefHeight="45.0" prefWidth="1033.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <items>
+            <JFXButton onAction="#ajouter" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #8EA2C6;" text="Ajouter Examen" textFill="WHITE" />
+            <JFXButton onAction="#modifier" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #8EA2C6;" text="Modifier Examen" textFill="WHITE" />
+            <JFXButton onAction="#supprimer" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #8EA2C6;" text="Supprimer Examen" textFill="WHITE" />
+            <JFXButton onAction="#imprimer" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #8EA2C6;" text="Imprimer Calendrier" textFill="WHITE" />
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="202.0" style="-fx-background-color: #8EA2C6;" text="Vider Contunu" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="ecom1" layoutX="8.0" layoutY="136.0" prefHeight="435.0" prefWidth="1085.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="136.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="jour" prefWidth="127.0" text="Jour" />
+            <TableColumn fx:id="date" prefWidth="185.0" text="Date" />
+            <TableColumn fx:id="matieres" prefWidth="123.0" text="Matières" />
+            <TableColumn fx:id="horaire" prefWidth="89.0" text="Horaire" />
+            <TableColumn fx:id="duree" prefWidth="103.0" text="Durée" />
+            <TableColumn fx:id="ng1" prefWidth="93.0" text="Nom G1" />
+            <TableColumn fx:id="sg1" prefWidth="79.0" text="Salle G1" />
+            <TableColumn fx:id="ng2" prefWidth="77.0" text="Nom G2" />
+            <TableColumn fx:id="sg2" prefWidth="77.0" text="Salle G2" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="473.0" layoutY="62.0" prefHeight="45.0" prefWidth="272.0" text="Calendrier 1ére ECOM" textFill="#67a3b2" AnchorPane.leftAnchor="473.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="62.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

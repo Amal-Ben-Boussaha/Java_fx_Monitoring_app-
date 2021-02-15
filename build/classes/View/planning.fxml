@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="2511.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PlanningController">
+   <children>
+      <ScrollPane layoutX="6.0" prefHeight="591.0" prefWidth="2504.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="275.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="1.0">
+        <content>
+          <AnchorPane prefHeight="703.0" prefWidth="2501.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="707.0" layoutY="19.0" prefHeight="38.0" prefWidth="714.0" text="Planning de Surveillance" textFill="#3192e8" AnchorPane.leftAnchor="707.0" AnchorPane.rightAnchor="1080.0" AnchorPane.topAnchor="19.0">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="31.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="planning" layoutY="85.0" prefHeight="540.0" prefWidth="2488.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="85.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="31.000030517578125" text="ID" />
+                      <TableColumn fx:id="nomcomplt" prefWidth="166.99996948242188" text="Nom Enseignants" />
+                        <TableColumn minWidth="26.0" prefWidth="241.33328247070312" text="Jour1">
+                           <columns>
+                              <TableColumn fx:id="j1s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j1s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j1s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="223.33343505859375" text="Jour2">
+                           <columns>
+                              <TableColumn fx:id="j2s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j2s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j2s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour3">
+                           <columns>
+                              <TableColumn fx:id="j3s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j3s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j3s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour4">
+                           <columns>
+                              <TableColumn fx:id="j4s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j4s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j4s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour5">
+                           <columns>
+                              <TableColumn fx:id="j5s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j5s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j5s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour6">
+                           <columns>
+                              <TableColumn fx:id="j6s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j6s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j6s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour7">
+                           <columns>
+                              <TableColumn fx:id="j7s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j7s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j7s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour8">
+                           <columns>
+                              <TableColumn fx:id="j8s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j8s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j8s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Jour9">
+                           <columns>
+                              <TableColumn fx:id="j9s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j9s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j9s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="176.0" text="Jour10">
+                           <columns>
+                              <TableColumn fx:id="j10s1" prefWidth="74.0" text="S1" />
+                              <TableColumn fx:id="j10s2" prefWidth="74.0" text="S2" />
+                              <TableColumn fx:id="j10s3" prefWidth="74.0" text="S3" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="nbre" minWidth="5.0" prefWidth="68.0" text="NBRE" />
+                    </columns>
+                  </TableView>
+                  <JFXButton layoutX="110.0" layoutY="646.0" onAction="#genere" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Démarrer " textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="462.0" layoutY="646.0" onAction="#planning" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Afficher" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="800.0" layoutY="646.0" onAction="#ajouter" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Ajouter Surveillance" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="1136.0" layoutY="646.0" onAction="#modifier" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Modifier Surveillance" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="1501.0" layoutY="646.0" onAction="#supprimer" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Supprimer Surveillance" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="2165.0" layoutY="646.0" onAction="#vider" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Vider Contunu" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="1841.0" layoutY="646.0" onAction="#telecharger" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #56739A;" text="Telecharger Planning" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

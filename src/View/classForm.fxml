@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="302.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClassFormController">
+   <children>
+      <JFXButton layoutX="141.0" layoutY="248.0" onAction="#insertion" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #483D8B; -fx-background-radius: 100px;" text="Ajouter" textFill="WHITE" />
+      <JFXButton layoutX="361.0" layoutY="246.0" onAction="#annuler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #483D8B; -fx-background-radius: 100px;" text="Anuuler" textFill="WHITE" />
+      <GridPane layoutX="33.0" layoutY="63.0" prefHeight="157.0" prefWidth="566.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="165.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="401.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nom de salle">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="20.0" />
+               </font></Label>
+            <Label text="Capacité" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="20.0" />
+               </font></Label>
+            <TextField fx:id="nom_sale" GridPane.columnIndex="1" />
+            <TextField fx:id="cap" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Nom de la Fac" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nfac" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

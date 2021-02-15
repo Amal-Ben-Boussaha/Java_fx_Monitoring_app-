@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="709.0" prefWidth="965.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MatieresController">
+   <children>
+      <TableView fx:id="table_materes" layoutX="45.0" layoutY="120.0" prefHeight="505.0" prefWidth="642.0" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="120.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="classe" prefWidth="134.0" text="Classe" />
+            <TableColumn fx:id="materes" prefWidth="553.0" text="Matières" />
+        </columns>
+      </TableView>
+      <ToolBar prefHeight="45.0" prefWidth="966.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <JFXButton onAction="#exporation" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #20B2AA;" text="Importer Liste" textFill="WHITE" />
+            <JFXButton onAction="#afficher" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #20B2AA;" text="Afficher" textFill="WHITE" />
+        </items>
+      </ToolBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="348.0" layoutY="76.0" prefHeight="33.0" prefWidth="297.0" text="Listes des matières " textAlignment="CENTER" textFill="#2960d7" AnchorPane.leftAnchor="348.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="76.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <ToolBar layoutX="28.0" layoutY="650.0" prefHeight="45.0" prefWidth="866.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="71.0">
+         <items>
+            <JFXButton onAction="#ajouter" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #20B2AA;" text="Ajouter Matiére" textFill="WHITE" />
+            <JFXButton onAction="#modifier" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #20B2AA;" text="Modifier Matiére" textFill="WHITE" />
+            <JFXButton onAction="#supprimer" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #20B2AA;" text="Supprimer Matiére" textFill="WHITE" />
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #20B2AA;" text="Vider Contunu" textFill="WHITE" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

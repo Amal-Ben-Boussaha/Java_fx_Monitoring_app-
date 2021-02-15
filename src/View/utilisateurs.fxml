@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="home" prefHeight="719.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UtilisateursController">
+   <children>
+      <TableView fx:id="utilisateurs" layoutX="351.0" layoutY="73.0" prefHeight="530.0" prefWidth="610.0" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="351.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="73.0">
+        <columns>
+          <TableColumn fx:id="colemail" prefWidth="179.0" text="            email" />
+            <TableColumn fx:id="colpas" prefWidth="241.0" text="     password" />
+            <TableColumn fx:id="coltype" minWidth="0.0" prefWidth="189.0" text="        type" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="805.0" layoutY="640.0" onAction="#supprimer" prefHeight="48.0" prefWidth="203.0" style="-fx-background-color: #3176c9; -fx-background-radius: 100px;" text="Supprimer" textFill="WHITE" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="0.0" />
+      <Pane prefHeight="719.0" prefWidth="348.0" style="-fx-background-color: #B0C4DE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="33.0" layoutY="36.0" prefHeight="40.0" prefWidth="260.0" text="Ajouter nouveau utilisateur" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Italic" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="email" layoutX="11.0" layoutY="126.0" prefHeight="40.0" prefWidth="270.0" promptText="Email" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="mdp" layoutX="14.0" layoutY="244.0" prefHeight="48.0" prefWidth="270.0" promptText="Mot de passe" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></JFXPasswordField>
+            <JFXPasswordField fx:id="mdp1" layoutX="14.0" layoutY="382.0" prefHeight="48.0" prefWidth="270.0" promptText="Conformé mot de passe" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></JFXPasswordField>
+            <JFXTextField fx:id="type" layoutX="14.0" layoutY="516.0" prefHeight="40.0" prefWidth="270.0" promptText="type" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="ajouter" layoutX="16.0" layoutY="640.0" onAction="#ajouter" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: #3176c9; -fx-background-radius: 100px;" text="Ajouter" textFill="WHITE" />
+            <JFXButton fx:id="annuler" layoutX="188.0" layoutY="640.0" onAction="#annulation" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #3176c9; -fx-background-radius: 100px;" text="Annuler" textFill="WHITE" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="syp" layoutX="365.0" layoutY="642.0" prefHeight="48.0" prefWidth="410.0" promptText="Email" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="365.0" AnchorPane.rightAnchor="210.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="571.0" layoutY="14.0" prefHeight="40.0" prefWidth="260.0" text="Listes des utilisateurs" textFill="#609ddd" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="571.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

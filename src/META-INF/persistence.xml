@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="ESENPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Controller.Wi2</class>
+    <class>Controller.Tsi</class>
+    <class>Controller.Ecom2</class>
+    <class>Controller.Actitvite</class>
+    <class>Controller.Wi1</class>
+    <class>Controller.Ecom3</class>
+    <class>Controller.Lfig3</class>
+    <class>Controller.Planning</class>
+    <class>Controller.Mecom1</class>
+    <class>Controller.Ecom</class>
+    <class>Controller.Disponibilites</class>
+    <class>Controller.Vic2</class>
+    <class>Controller.Tsi3</class>
+    <class>Controller.Mbds1</class>
+    <class>Controller.Mecom2</class>
+    <class>Controller.Utilisateur</class>
+    <class>Controller.SeancExamen</class>
+    <class>Controller.Planningds</class>
+    <class>Controller.Tsi2</class>
+    <class>Controller.Planningsc</class>
+    <class>Controller.Lfig2</class>
+    <class>Controller.Mbds2</class>
+    <class>Controller.Grade</class>
+    <class>Controller.Vic1</class>
+    <class>Controller.Mati</class>
+    <class>Controller.Salle</class>
+    <class>Controller.Lfig</class>
+    <class>Controller.Enseignant</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/esen?characterEncoding=utf8"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="792.0" prefWidth="1293.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CalendreirController">
+   <children>
+      <TableView fx:id="lfig1" layoutX="21.0" layoutY="146.0" prefHeight="566.0" prefWidth="1181.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="146.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="43.000030517578125" text="Id" />
+          <TableColumn fx:id="jour" prefWidth="107.0" text="Jour" />
+            <TableColumn fx:id="date" prefWidth="93.0" text="Date" />
+            <TableColumn fx:id="mat" prefWidth="145.0" text="Matières" />
+            <TableColumn fx:id="horaire" prefWidth="105.0" text="Horaire" />
+            <TableColumn fx:id="durée" prefWidth="97.0" text="Durèe" />
+            <TableColumn fx:id="groupe" prefWidth="84.0" text="Groupe G1" />
+            <TableColumn fx:id="salle" prefWidth="84.0" text="Salle G1" />
+            <TableColumn fx:id="groupe2" prefWidth="84.0" text="Groupe2" />
+            <TableColumn fx:id="salle2" prefWidth="84.0" text="Salle G2" />
+            <TableColumn fx:id="groupe3" prefWidth="84.0" text="Groupe G3" />
+            <TableColumn fx:id="salle3" prefWidth="84.0" text="Salle G3" />
+            <TableColumn fx:id="groupe4" prefWidth="84.0" text="Groupe G4" />
+            <TableColumn fx:id="salle4" prefWidth="84.0" text="Salle G4" />
+        </columns>
+      </TableView>
+      <ToolBar prefHeight="29.0" prefWidth="1293.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <JFXButton onAction="#ajouter" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #6A5ACD;" text="Ajouter examen" textFill="WHITE" />
+            <JFXButton onAction="#modifier" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #6A5ACD;" text="Modifier examen" textFill="WHITE" />
+            <JFXButton onAction="#supprimer" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #6A5ACD;" text="Supprimer examen" textFill="WHITE" />
+            <JFXButton onAction="#imprime" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #6A5ACD;" text="Imprimer  calendrier" textFill="WHITE" />
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #6A5ACD;" text="Vider Contunu" textFill="WHITE" />
+            
+        </items>
+      </ToolBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="74.0" prefHeight="29.0" prefWidth="475.0" text="Calendrier  1ére LFIG" textAlignment="CENTER" textFill="#325be1">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

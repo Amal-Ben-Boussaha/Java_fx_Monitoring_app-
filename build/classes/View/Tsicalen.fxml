@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="964.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TsicalenController">
+   <children>
+      <ToolBar prefHeight="45.0" prefWidth="876.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton onAction="#ajouter" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: #7B68EE;" text="Ajouterr Examen" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#modifier" prefHeight="31.0" prefWidth="148.0" style="-fx-background-color: #7B68EE;" text="Modifier Examen" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#supprimer" prefHeight="31.0" prefWidth="167.0" style="-fx-background-color: #7B68EE;" text="Supprimer Examen" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#imprimer" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: #7B68EE;" text="Imprimer Calendrier " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: #7B68EE;" text="Vider Contunu" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+         </items>
+      </ToolBar>
+      <TableView fx:id="tsi1" layoutX="14.0" layoutY="122.0" prefHeight="381.0" prefWidth="839.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="122.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="jour" prefWidth="75.0" text="jour" />
+            <TableColumn fx:id="date" prefWidth="178.0" text="Date" />
+            <TableColumn fx:id="matieres" prefWidth="90.0" text="Matières" />
+            <TableColumn fx:id="horaire" prefWidth="88.0" text="Horaire" />
+            <TableColumn fx:id="duree" prefWidth="95.0" text="Durée" />
+            <TableColumn fx:id="g1" prefWidth="82.0" text="Nom G1" />
+            <TableColumn fx:id="s1" prefWidth="78.0" text="Salle g1" />
+            <TableColumn fx:id="g2" prefWidth="75.0" text="Nom G2" />
+            <TableColumn fx:id="s2" prefWidth="90.0" text="Salle g2" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="343.0" layoutY="72.0" text="Calendrier 1ére TSI" textFill="#148ad3">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

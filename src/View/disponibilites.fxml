@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="1176.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DisponibilitesController">
+   <children>
+      <ToolBar prefHeight="45.0" prefWidth="1105.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton onAction="#importation" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: #6495ED;" text="choisir fichier" textFill="WHITE" />
+            <TextField fx:id="schema" prefHeight="31.0" prefWidth="780.0" />
+            <JFXButton onAction="#ouvrire" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #6495ED;" text="Enregistrer" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <ToolBar layoutX="100.0" layoutY="478.0" prefHeight="45.0" prefWidth="985.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="91.0">
+         <items>
+            <JFXButton fx:id="affichie" onAction="#affichier" prefHeight="31.0" prefWidth="221.0" style="-fx-background-color: #6495ED;" text="Afficher liste " textFill="WHITE" />
+            <JFXButton fx:id="ajouter" onAction="#ajouter" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: #6495ED;" text="Ajouter" textFill="WHITE" />
+            <JFXButton fx:id="modifier" onAction="#modifier" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #6495ED;" text="Modifier" textFill="WHITE" />
+            <JFXButton fx:id="supprimer" onAction="#supprimer" prefHeight="31.0" prefWidth="202.0" style="-fx-background-color: #6495ED;" text="Supprimer" textFill="WHITE" />
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #6495ED;" text="Vider Continu " textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="tab_disp" layoutX="14.0" layoutY="80.0" prefHeight="333.0" prefWidth="1097.0" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="iddisp" onEditStart="#e" prefWidth="44.0" text="ID" />
+          <TableColumn fx:id="idactivites" text="IDActivité" />
+            <TableColumn fx:id="heure" prefWidth="72.0" text="heure" />
+            <TableColumn fx:id="jour" prefWidth="76.0" text="Jour" />
+            <TableColumn fx:id="classe" prefWidth="118.0" text="Classes" />
+            <TableColumn fx:id="matieres" prefWidth="211.6666259765625" text="Matiéres" />
+            <TableColumn fx:id="prof" prefWidth="260.00006103515625" text="Ensignants" />
+            <TableColumn fx:id="code" prefWidth="105.0" text="code" />
+            <TableColumn fx:id="salle" minWidth="0.0" prefWidth="150.0" text="salle" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

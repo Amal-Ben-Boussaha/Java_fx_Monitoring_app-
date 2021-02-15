@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="969.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Consult1MasterController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="355.0" layoutY="10.0" text="Calendreiers Des Examen" textFill="#09aab9">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="43.0" text="Calendrier 1MECOM" textFill="#ed0448">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="172.0" text="Calendrier 1MBDS" textFill="#ed0448">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="302.0" text="Calendrier 1WI" textFill="#ed0448">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="mecom1" layoutX="11.0" layoutY="62.0" prefHeight="110.0" prefWidth="930.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="62.0">
+        <columns>
+          <TableColumn fx:id="idl" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="jourl" prefWidth="95.0" text="Jour" />
+            <TableColumn fx:id="datel" prefWidth="184.0" text="Date" />
+            <TableColumn fx:id="matieresl" prefWidth="325.0" text="Matières" />
+            <TableColumn fx:id="horairel" prefWidth="115.0" text="Horaire" />
+            <TableColumn fx:id="dureel" prefWidth="93.0" text="Durée" />
+            <TableColumn fx:id="sg1l" prefWidth="78.0" text="Salle " />
+            
+        </columns>
+      </TableView>
+      <TableView fx:id="mbds1" layoutX="10.0" layoutY="191.0" prefHeight="110.0" prefWidth="930.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="191.0">
+        <columns>
+          <TableColumn fx:id="idt" prefWidth="48.0" text="Id" />
+          <TableColumn fx:id="jourt" prefWidth="136.0" text="Jour" />
+            <TableColumn fx:id="datet" prefWidth="111.00003051757812" text="Date" />
+            <TableColumn fx:id="matierest" prefWidth="257.0" text="Matières" />
+            <TableColumn fx:id="horairet" prefWidth="136.0" text="Horaire" />
+            <TableColumn fx:id="dureet" prefWidth="102.0" text="Durée" />
+            <TableColumn fx:id="sg1t" prefWidth="136.0" text="Salle " />
+            </columns>
+      </TableView>
+      <TableView fx:id="wi1" layoutX="11.0" layoutY="320.0" prefHeight="110.0" prefWidth="930.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="28.0">
+        <columns>
+          <TableColumn fx:id="idw" prefWidth="53.000030517578125" text="id" />
+          <TableColumn fx:id="jourw" prefWidth="103.00003051757812" text="Jour" />
+            <TableColumn fx:id="datew" prefWidth="113.0" text="Date" />
+            <TableColumn fx:id="matieresw" prefWidth="340.0" text="Matières" />
+            <TableColumn fx:id="horairew" prefWidth="125.0" text="Horaire" />
+            <TableColumn fx:id="dureew" prefWidth="108.0" text="Durée" />
+            <TableColumn fx:id="sg1w" prefWidth="86.0" text="Salle " />
+          </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="432.0" text="Calendrier 1VIC" textFill="#ed0448">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="vic1" layoutX="11.0" layoutY="451.0" prefHeight="110.0" prefWidth="930.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="28.0">
+         <columns>
+            <TableColumn fx:id="idv" prefWidth="33.0" text="id" />
+            <TableColumn fx:id="jourv" prefWidth="128.99996948242188" text="Jour" />
+            <TableColumn fx:id="datev" prefWidth="172.00003051757812" text="Date" />
+            <TableColumn fx:id="matieresv" prefWidth="246.0" text="Matières" />
+            <TableColumn fx:id="horairev" prefWidth="153.0" text="Horaire" />
+            <TableColumn fx:id="dureev" prefWidth="114.0" text="Durée" />
+            <TableColumn fx:id="sg1v" prefWidth="83.0" text="Salle " />
+         </columns>
+      </TableView>
+
+   </children>
+</AnchorPane>

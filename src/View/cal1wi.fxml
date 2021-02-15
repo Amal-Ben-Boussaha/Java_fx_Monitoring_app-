@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="676.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Cal1wiController">
+   <children>
+      <ToolBar prefHeight="45.0" prefWidth="1028.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton onAction="#ajouter" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #5F9EA0;" text="Ajouter Examen" textFill="WHITE" />
+            <JFXButton onAction="#modifier" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #5F9EA0;" text="Modifier Examen" textFill="WHITE" />
+            <JFXButton onAction="#supprimer" prefHeight="31.0" prefWidth="210.0" style="-fx-background-color: #5F9EA0;" text="Supprimer Examen" textFill="WHITE" />
+            <JFXButton onAction="#imprimer" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #5F9EA0;" text="Imprimer Calendrier" textFill="WHITE" />
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #5F9EA0;" text="Vider Contunu" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="wi1" layoutX="36.0" layoutY="105.0" prefHeight="451.0" prefWidth="825.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="105.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="jour" prefWidth="108.0" text="Jour" />
+            <TableColumn fx:id="date" prefWidth="187.0" text="Date" />
+            <TableColumn fx:id="matieres" prefWidth="312.0" text="Matières" />
+            <TableColumn fx:id="horaire" prefWidth="132.0" text="Horaire" />
+            <TableColumn fx:id="duree" prefWidth="107.0" text="Durée" />
+             <TableColumn fx:id="salle" prefWidth="113.0" text="Salle" />
+        </columns>
+      </TableView>
+      <Label layoutX="428.0" layoutY="55.0" text="Calendrier 1WI" textFill="#0d7497" AnchorPane.leftAnchor="428.0" AnchorPane.rightAnchor="326.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="39.0" />
+         </font>
+      </Label>
+   </children>
+    
+    
+</AnchorPane>

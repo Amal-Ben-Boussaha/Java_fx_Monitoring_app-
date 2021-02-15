@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="711.0" prefWidth="916.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Salle_examenController">
+   <children>
+      <ToolBar layoutX="-2.0" layoutY="1.0" prefHeight="45.0" prefWidth="659.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton onAction="#importation" text="Choisir Fichier">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <TextField fx:id="chema" prefHeight="31.0" prefWidth="651.0" />
+            <JFXButton onAction="#ouvrire" prefHeight="31.0" prefWidth="123.0" text="Enregistrer">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+         </items>
+      </ToolBar>
+      <TableView fx:id="tabclasse" layoutX="14.0" layoutY="91.0" prefHeight="539.0" prefWidth="883.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="91.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="126.0" text="ID" />
+          <TableColumn fx:id="nom_sal" prefWidth="226.0" text="Nom de salle" />
+            <TableColumn fx:id="cap_salle" prefWidth="326.0" text="Capacite de salle" />
+            <TableColumn fx:id="nfac" prefWidth="204.0" text="Nom de fac" />
+        </columns>
+      </TableView>
+      <ToolBar layoutY="656.0" prefHeight="55.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <JFXButton onAction="#affichier" prefHeight="37.0" prefWidth="202.0" style="-fx-background-color: #4682B4;" text="Affichier liste des Salles" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#ajouter" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: #4682B4;" text="Ajouter salle" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#modifier" prefHeight="37.0" prefWidth="236.0" style="-fx-background-color: #4682B4;" text="Modifier salle" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#supprimer" prefHeight="38.0" prefWidth="219.0" style="-fx-background-color: #4682B4;" text="Supprimer salle" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font></JFXButton>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

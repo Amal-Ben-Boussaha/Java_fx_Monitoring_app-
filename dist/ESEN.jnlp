@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ESEN.jnlp">
+  <information>
+    <title>ESEN</title>
+    <vendor>Amal Ben Boussaha</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ESEN.jar" size="701003" download="eager" />
+    <jar href="lib\TransportFX.jar" size="57357" download="eager" />
+    <jar href="lib\commons-csv-1.5-sources.jar" size="45201" download="eager" />
+    <jar href="lib\commons-csv-1.5.jar" size="41586" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\eclipselink.jar" size="8478776" download="eager" />
+    <jar href="lib\fontawesomefx-8.0.1-SNAPSHOT.jar" size="65537" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\itextpdf-5.5.4.jar" size="2148390" download="eager" />
+    <jar href="lib\jasperreports-6.2.0.jar" size="5300024" download="eager" />
+    <jar href="lib\javax.persistence_2.1.0.v201304241213.jar" size="164637" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\jfxtras-labs-samples-8.0-r6-SNAPSHOT-all.jar" size="4785232" download="eager" />
+    <jar href="lib\junit-4.12-javadoc.jar" size="937942" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.45-bin.jar" size="999810" download="eager" />
+    <jar href="lib\org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" size="1366247" download="eager" />
+    <jar href="lib\poi-3.10.1.jar" size="1949542" download="eager" />
+    <jar href="lib\poi-3.13.jar" size="2497380" download="eager" />
+    <jar href="lib\poi-ooxml-3.10.1.jar" size="1035419" download="eager" />
+    <jar href="lib\poi-ooxml-3.13.jar" size="1142386" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.10.1.jar" size="4946391" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.13.jar" size="5641539" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ESEN" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="esen.ESEN"  name="ESEN" />
+  <update check="always"/>
+</jnlp>

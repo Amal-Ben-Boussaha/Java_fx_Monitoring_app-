@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="892.0" prefWidth="2175.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PlannificationdsController">
+   <children>
+      <ScrollPane layoutY="-1.0" prefHeight="893.0" prefWidth="2175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="891.0" prefWidth="2174.0">
+               <children>
+                  <Label layoutX="451.0" layoutY="29.0" prefHeight="21.0" prefWidth="428.0" text="Planning de surveillance de DS" textFill="#568deb">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="32.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="planningds" layoutX="14.0" layoutY="96.0" prefHeight="677.0" prefWidth="2146.0" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="96.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="nomcomplt" prefWidth="175.99996948242188" text="Nom Ensegnants" />
+                        <TableColumn prefWidth="124.0" text="Jour 1">
+                           <columns>
+                              <TableColumn fx:id="j1s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j1s2" prefWidth="75.0" text="S2" />
+                              <TableColumn fx:id="j1s3" prefWidth="75.0" text="S3" />
+                              <TableColumn fx:id="j1s4" prefWidth="75.0" text="S4" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="Jour 2">
+                           <columns>
+                              <TableColumn fx:id="j2s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j2s2" prefWidth="75.0" text="S2" />
+                              <TableColumn fx:id="j2s3" prefWidth="75.0" text="S3" />
+                              <TableColumn fx:id="j2s4" prefWidth="75.0" text="S4" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="Jour 3">
+                           <columns>
+                              <TableColumn fx:id="j3s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j3s2" prefWidth="75.0" text="S2" />
+                              <TableColumn fx:id="j3s3" prefWidth="75.0" text="S3" />
+                              <TableColumn fx:id="j3s4" prefWidth="75.0" text="S4" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="Jour 4">
+                           <columns>
+                              <TableColumn fx:id="j4s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j4s2" prefWidth="75.0" text="S2" />
+                              <TableColumn fx:id="j4s3" prefWidth="75.0" text="S3" />
+                              <TableColumn fx:id="j4s4" prefWidth="75.0" text="S4" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="Jour 5">
+                           <columns>
+                              <TableColumn fx:id="j5s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j5s2" prefWidth="75.0" text="S2" />
+                              <TableColumn fx:id="j5s3" prefWidth="75.0" text="S3" />
+                              <TableColumn fx:id="j5s4" prefWidth="75.0" text="S4" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="Jour 6">
+                           <columns>
+                              <TableColumn fx:id="j6s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j6s2" prefWidth="75.0" text="S2" />
+                              <TableColumn fx:id="j6s3" prefWidth="75.0" text="S3" />
+                              <TableColumn fx:id="j6s4" prefWidth="75.0" text="S4" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="nbre" prefWidth="94.0" text="Nbre" />
+                    </columns>
+                  </TableView>
+                  <JFXButton layoutX="239.0" layoutY="804.0" onAction="#demarrer" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Démarrer" textFill="WHITE" />
+                  <JFXButton layoutX="479.0" layoutY="804.0" onAction="#afficher" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Afficher" textFill="WHITE" />
+                  <JFXButton layoutX="721.0" layoutY="804.0" onAction="#ajouter" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Ajouter" textFill="WHITE" />
+                  <JFXButton layoutX="962.0" layoutY="804.0" onAction="#modifier" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Modifier" textFill="WHITE" />
+                  <JFXButton layoutX="1203.0" layoutY="804.0" onAction="#supprimer" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Supprimer" textFill="WHITE" />
+                  <JFXButton layoutX="1444.0" layoutY="804.0" onAction="#telecharger" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Telecharger" textFill="WHITE" />
+                  <JFXButton layoutX="1685.0" layoutY="804.0" onAction="#vider" prefHeight="31.0" prefWidth="230.0" style="-fx-background-color: #3488e7;" text="Vider Contunu" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

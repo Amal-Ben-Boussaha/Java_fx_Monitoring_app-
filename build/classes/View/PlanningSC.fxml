@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1049.0" prefWidth="4867.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PlanningSCController">
+    <stylesheets>
+        <URL value="@planningsc.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutX="-10.0" prefHeight="1169.0" prefWidth="4878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1172.0" prefWidth="4941.0" style="-fx-background-color: #ffffff;" stylesheets="@planningsc.css">
+               <children>
+                  <TableView fx:id="planningsr" layoutX="14.0" layoutY="133.0" prefHeight="768.0" prefWidth="4827.0" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="100.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="43.0" text="ID" />
+                      <TableColumn fx:id="nc" prefWidth="166.0" text="Nom Enseginants" />
+                        <TableColumn prefWidth="166.0" text="Jour 1">
+                           <columns>
+                              <TableColumn fx:id="j1s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j1s2" prefWidth="75.0" text="S2" />
+                              
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 2">
+                           <columns>
+                              <TableColumn fx:id="j2s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j2s2" prefWidth="75.0" text="S2" />
+                              
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 3">
+                           <columns>
+                              <TableColumn fx:id="j3s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j3s2" prefWidth="75.0" text="S2" />
+                              
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 4">
+                           <columns>
+                              <TableColumn fx:id="j4s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j4s2" prefWidth="75.0" text="S2" />
+                            </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 5">
+                           <columns>
+                              <TableColumn fx:id="j5s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j5s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 6">
+                           <columns>
+                              <TableColumn fx:id="j6s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j6s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 7">
+                           <columns>
+                              <TableColumn fx:id="j7s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j7s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 8">
+                           <columns>
+                              <TableColumn fx:id="j8s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j8s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 9">
+                           <columns>
+                              <TableColumn fx:id="j9s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j9s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 10">
+                           <columns>
+                              <TableColumn fx:id="j10s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j10s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 11">
+                           <columns>
+                              <TableColumn fx:id="j11s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j11s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 12">
+                           <columns>
+                              <TableColumn fx:id="j12s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j12s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 13">
+                           <columns>
+                              <TableColumn fx:id="j13s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j13s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="166.0" text="Jour 14">
+                           <columns>
+                              <TableColumn fx:id="j14s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j14s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="311.0" text="Jour 15">
+                           <columns>
+                              <TableColumn fx:id="j15s1" prefWidth="75.0" text="S1" />
+                              <TableColumn fx:id="j15s2" prefWidth="75.0" text="S2" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="nbre" prefWidth="117.0" text="NBRE" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="571.0" layoutY="66.0" prefHeight="38.0" prefWidth="606.0" text="Planning Session Rattrapage" textFill="#0f7dd0" AnchorPane.leftAnchor="571.0" AnchorPane.rightAnchor="3764.0" AnchorPane.topAnchor="66.0">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="33.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="409.0" layoutY="957.0" onAction="#demmarer" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Démmarer Planning" textFill="WHITE" />
+                  <JFXButton layoutX="682.0" layoutY="957.0" onAction="#afficher" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Afficher Planning" textFill="WHITE" />
+                  <JFXButton layoutX="949.0" layoutY="957.0" onAction="#ajouter" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Ajouter Surveillant" textFill="WHITE" />
+                  <JFXButton layoutX="1219.0" layoutY="957.0" onAction="#modifier" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Modifier Surveillant" textFill="WHITE" />
+                  <JFXButton layoutX="1501.0" layoutY="957.0" onAction="#supprimer" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Supprimer Surveillant" textFill="WHITE" />
+                  <JFXButton layoutX="1754.0" layoutY="957.0" onAction="#telecharger" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Telecharger Planning" textFill="WHITE" />
+                  <JFXButton layoutX="2020.0" layoutY="957.0" onAction="#vider" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0f7dd0;" text="Vider Contunu" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

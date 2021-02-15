@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="669.0" prefWidth="1102.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Cal2mbdsController">
+    <children>
+      <ToolBar prefHeight="45.0" prefWidth="1028.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton onAction="#ajouter" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #483D8B;" text="Ajouter Examen" textFill="WHITE" />
+            <JFXButton onAction="#modifier" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #483D8B;" text="Modifier Examen" textFill="WHITE" />
+            <JFXButton onAction="#supprimer" prefHeight="31.0" prefWidth="210.0" style="-fx-background-color: #483D8B;" text="Supprimer Examen" textFill="WHITE" />
+            <JFXButton onAction="#imprimer" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #483D8B;" text="Imprimer Calendrier" textFill="WHITE" />
+            <JFXButton onAction="#vider" prefHeight="31.0" prefWidth="204.0" style="-fx-background-color: #483D8B;" text="Vider Contunu" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="mbds2table" layoutX="26.0" layoutY="108.0" prefHeight="483.0" prefWidth="1008.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="108.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="jour" prefWidth="155.0" text="Jour" />
+            <TableColumn fx:id="date" prefWidth="186.0" text="Date" />
+            <TableColumn fx:id="matieres" prefWidth="287.0" text="Matiéres" />
+            <TableColumn fx:id="horaire" prefWidth="121.0" text="Horaire" />
+            <TableColumn fx:id="duree" prefWidth="92.0" text="Duree" />
+            <TableColumn fx:id="salle" prefWidth="91.0" text="Salle" />
+        </columns>
+      </TableView>
+      <Label layoutX="440.0" layoutY="62.0" prefHeight="30.0" prefWidth="272.0" text="Calendrier 2MBDS" textFill="#122687" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="390.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="27.0" />
+         </font>
+      </Label>
+   
+   </children>
+       
+   
+</AnchorPane>
