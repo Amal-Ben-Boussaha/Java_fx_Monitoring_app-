@@ -116,7 +116,7 @@ public class Cal1mbdsController implements Initializable {
          }
         rs.first();
         Document d = new Document();
-        PdfWriter.getInstance(d,new FileOutputStream ("2Mbds.pdf"));
+        PdfWriter.getInstance(d,new FileOutputStream ("Nom.pdf"));
         PdfPTable pt = new PdfPTable(colnc);
         d.open();
         d.add(new Paragraph("Calendrier Des examen"));
