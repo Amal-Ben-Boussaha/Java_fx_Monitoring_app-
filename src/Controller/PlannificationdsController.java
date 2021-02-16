@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import com.itextpdf.text.BaseColor;
@@ -151,7 +146,7 @@ public class PlannificationdsController implements Initializable {
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(id);
+           
             }
         
         
@@ -285,7 +280,7 @@ public class PlannificationdsController implements Initializable {
                 {
 
                 nom=nom +"  "+rs.getString(1);
-                 System.out.println(nom);
+                
                 }
 
 
@@ -351,7 +346,7 @@ public class PlannificationdsController implements Initializable {
     else if(!M.equals("0")&&!Mate.equals("0") )
             {
                 M=M+"  "+Mate;
-                System.out.println(M);
+              
             }
     else if(!Mate.equals("")&&M.equals("0"))
     {
@@ -359,7 +354,7 @@ public class PlannificationdsController implements Initializable {
     }
     else 
     { M=M;}
-    System.out.println(M);
+  
     return M;
     }
     private String Matieresecom(String mat,String Hor)
@@ -403,7 +398,7 @@ return M;}
                 {
                     {   
                     M=rs.getString(1);
-                   System.out.println(M);       
+                         
                 }
                 }
                  
@@ -451,7 +446,7 @@ String M="";
     else if(!M.equals("0")&&!T.equals("0") )
             {
                 M=M+"  "+T;
-                System.out.println(M);
+               
             }
     else if(!T.equals("")&&M.equals("0"))
     {
@@ -459,7 +454,7 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println("1"+M);
+    
     return M;
 }     
 private String Matieres2t(String mat,String S)
@@ -479,7 +474,7 @@ String M="";
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-    System.out.println(M);
+    
     return M;
 }      
 private String Matieres2e(String mat,String S)
@@ -506,7 +501,7 @@ String M="";
     else if(!M.equals("0")&&!T.equals("0") )
             {
                 M=M+"  "+T;
-                System.out.println(M);
+               
             }
     else if(!T.equals("")&&M.equals("0"))
     {
@@ -514,7 +509,7 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println("3"+M);
+   
     return M;
 }   
 private String ListeMAtEns(String L,String Hor)
@@ -527,8 +522,6 @@ private String ListeMAtEns(String L,String Hor)
      {S=S+nomEns(E[a]);
         a++;
      } 
-     
-      System.out.println("bensba ll 2eme "+S);
     return S;
 }
 private String Matieres3l(String mat,String S)
@@ -555,7 +548,7 @@ String M="";
     else if(!M.equals("0")&&!T.equals("0") )
             {
                 M=M+"  "+T;
-                System.out.println(M);
+               
             }
     else if(!T.equals("")&&M.equals("0"))
     {
@@ -563,7 +556,7 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println("1"+M);
+    
     return M;
 
 }      
@@ -584,7 +577,7 @@ private String Matieres3t(String mat,String S)
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-    System.out.println("2"+M);
+   
     return M;
 
 }      
@@ -612,7 +605,7 @@ String M="";
     else if(!M.equals("0")&&!T.equals("0") )
             {
                 M=M+"  "+T;
-                System.out.println(M);
+                
             }
     else if(!T.equals("")&&M.equals("0"))
     {
@@ -620,7 +613,7 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println("3"+M);
+   
     return M;
 }
 private String ListeEns(String L,String Hor)
@@ -629,11 +622,11 @@ private String ListeEns(String L,String Hor)
      String K= Matieres3e(L,Hor);
      String[] E =K.split("  ");
      while (a<E.length)
-     {System.out.print(a);
+     {
         S=S+nomEns(E[a]);
         a++;
      }
-     System.out.println("bensba ll 3eme"+S);
+     
      return S;
 }
 private String Matieres1m(String mat,String S)
@@ -652,7 +645,7 @@ private String Matieres1m(String mat,String S)
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-    System.out.println("1"+M);
+   
     return M;}
 private String Matieresw1(String mat,String S)
 {
@@ -680,7 +673,7 @@ String M="";
     else if(!M.equals("0")&&!T.equals("0") )
             {
                 M=M+"  "+T;
-                System.out.println(M);
+                
             }
     else if(!T.equals("")&&M.equals("0"))
     {
@@ -688,7 +681,6 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println("2"+M);
     return M;
 }
 private String Matieres1b(String mat,String S)
@@ -881,8 +873,7 @@ private String Listes(String L,String Hor)
      String K= Matieres1b(L,Hor);
      String[] E =K.split("  ");
      while (a<E.length)
-     {System.out.println(E[a]);
-     System.out.println(a);    
+     {   
      S=S+nomEns(E[a]);
          a++;
      }
@@ -931,7 +922,7 @@ private void plannning1()
         { 
           if(i==1)
            {
-               System.out.println(G[i]);
+               
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -939,8 +930,7 @@ private void plannning1()
               
                {
                if(A[compteur].equals("S1"))
-                {   System.out.println(A[compteur]);
-                    String Ens = K(G[i],A[compteur]);
+                {   String Ens = K(G[i],A[compteur]);
                     String[] E =Ens.split("  ");
                     while(j<E.length)
                      { 
@@ -949,7 +939,7 @@ private void plannning1()
                           if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {
                             try
-                                {System.out.println("CV T3ADA");
+                                {
                                     String update = "UPDATE planningds SET `j1s1`='1', `j1s2`='1' where nomcomplt like '%"+E[j]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -961,8 +951,8 @@ private void plannning1()
                         }else
                         {
                             try
-                                       {System.out.println("CV T3ADA");
-                                        String update = "UPDATE planningds SET j1s1='1' where nomcomplt like '%"+E[j]+"%' ";
+                                       {
+                                String update = "UPDATE planningds SET j1s1='1' where nomcomplt like '%"+E[j]+"%' ";
                                         pst = connection.prepareStatement(update);
                                         pst.execute();
                                
@@ -974,19 +964,17 @@ private void plannning1()
                         }
                         else
                    if(A[compteur].equals("S2"))
-                           {   System.out.println(A[compteur]);
-                               String Ens = K(G[i],A[compteur]);
+                           {    String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(j1<E.length)
                                         {
-                                            System.out.println(E[j1]);
+                                           
                                             String nom =GradeEns(E[j1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j1s1`='1', `j1s2`='1' where nomcomplt like '%"+E[j1]+"%' ";
+                                                    {   String update = "UPDATE planningds SET `j1s1`='1', `j1s2`='1' where nomcomplt like '%"+E[j1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -997,7 +985,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j1s2='1' where nomcomplt like '%"+E[j1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1010,19 +998,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S3"))
-                           {    System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(j2<E.length)
                                         {
-                                            System.out.println(E[j2]);
+                                            
                                             String nom =GradeEns(E[j2]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j1s2`='1', `j1s3`='1' where nomcomplt like '%"+E[j2]+"%' ";
+                                                    {   String update = "UPDATE planningds SET `j1s2`='1', `j1s3`='1' where nomcomplt like '%"+E[j2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -1033,7 +1020,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j1s3='1' where nomcomplt like '%"+E[j2]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1046,18 +1033,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S4"))
-                           {    System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(j3<E.length)
                                         {
-                                            System.out.println(E[j3]);
+                                           
                                             String nom =GradeEns(E[j3]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j1s3`='1', `j1s4`='1' where nomcomplt like '%"+E[j3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1069,8 +1056,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
-                                                        String update = "UPDATE planningds SET j1s4='1' where nomcomplt like '%"+E[j3]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j1s4='1' where nomcomplt like '%"+E[j3]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1084,7 +1070,7 @@ private void plannning1()
               
                 if(i==3)
                 {
-               System.out.println(G[i]);
+            
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -1092,7 +1078,7 @@ private void plannning1()
               
                {
                if(A[compteur].equals("S1"))
-                {   System.out.println(A[compteur]);
+                { 
                     String Ens = K(G[i],A[compteur]);
                     String[] E =Ens.split("  ");
                     while(f<E.length)
@@ -1101,7 +1087,8 @@ private void plannning1()
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {
                             try
-                                {System.out.println("CV T3ADA");
+                                {
+                                
                                     String update = "UPDATE planningds SET `j2s1`='1', `j2s2`='1' where nomcomplt like '%"+E[f]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -1113,7 +1100,7 @@ private void plannning1()
                         }else
                         {
                             try
-                                       {System.out.println("CV T3ADA");
+                                       {
                                         String update = "UPDATE planningds SET j2s1='1' where nomcomplt like '%"+E[f]+"%' ";
                                         pst = connection.prepareStatement(update);
                                         pst.execute();
@@ -1126,19 +1113,17 @@ private void plannning1()
                         }
                         else
                    if(A[compteur].equals("S2"))
-                           {   System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(f1<E.length)
                                         {
-                                            System.out.println(E[f1]);
                                             String nom =GradeEns(E[f1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j2s1`='1', `j2s2`='1' where nomcomplt like '%"+E[f1]+"%' ";
+                                                    {   String update = "UPDATE planningds SET `j2s1`='1', `j2s2`='1' where nomcomplt like '%"+E[f1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -1149,7 +1134,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j2s2='1' where nomcomplt like '%"+E[f1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1162,18 +1147,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S3"))
-                           {    System.out.println(A[compteur]);
+                           {    
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(f2<E.length)
                                         {
-                                            System.out.println(E[f2]);
+                                           
                                             String nom =GradeEns(E[f2]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j2s2`='1', `j2s3`='1' where nomcomplt like '%"+E[f2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1185,7 +1170,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j2s3='1' where nomcomplt like '%"+E[f2]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1198,18 +1183,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S4"))
-                           {    System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(f3<E.length)
                                         {
-                                            System.out.println(E[f3]);
+                                          
                                             String nom =GradeEns(E[f3]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j2s3`='1', `j2s4`='1' where nomcomplt like '%"+E[f3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1221,7 +1206,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j2s4='1' where nomcomplt like '%"+E[f3]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1235,7 +1220,7 @@ private void plannning1()
            else if(i==5)
            
            {
-               System.out.println(G[i]);
+               
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -1243,8 +1228,8 @@ private void plannning1()
               
                {
                if(A[compteur].equals("S1"))
-                {   System.out.println(A[compteur]);
-                    String Ens = K(G[i],A[compteur]);
+                { 
+                   String Ens = K(G[i],A[compteur]);
                     String[] E =Ens.split("  ");
                     while(k<E.length)
                      { 
@@ -1252,8 +1237,8 @@ private void plannning1()
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {
                             try
-                                {System.out.println("CV T3ADA");
-                                    String update = "UPDATE planningds SET `j3s1`='1', `j3s2`='1' where nomcomplt like '%"+E[k]+"%' ";
+                                {
+                                String update = "UPDATE planningds SET `j3s1`='1', `j3s2`='1' where nomcomplt like '%"+E[k]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
                                 }   catch (SQLException e)
@@ -1264,8 +1249,8 @@ private void plannning1()
                         }else
                         {
                             try
-                                       {System.out.println("CV T3ADA");
-                                        String update = "UPDATE planningds SET j3s1='1' where nomcomplt like '%"+E[k]+"%' ";
+                                       {
+                                String update = "UPDATE planningds SET j3s1='1' where nomcomplt like '%"+E[k]+"%' ";
                                         pst = connection.prepareStatement(update);
                                         pst.execute();
                                
@@ -1277,18 +1262,18 @@ private void plannning1()
                         }
                         else
                    if(A[compteur].equals("S2"))
-                           {   System.out.println(A[compteur]);
-                               String Ens = K(G[i],A[compteur]);
+                           {   
+                       String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(k1<E.length)
                                         {
-                                            System.out.println(E[k1]);
+                                            
                                             String nom =GradeEns(E[k1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j3s1`='1', `j3s2`='1' where nomcomplt like '%"+E[k1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1300,7 +1285,8 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
+                                                        
                                                         String update = "UPDATE planningds SET j3s2='1' where nomcomplt like '%"+E[k1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1313,18 +1299,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S3"))
-                           {    System.out.println(A[compteur]);
+                           {    
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(k2<E.length)
                                         {
-                                            System.out.println(E[k2]);
+                                           
                                             String nom =GradeEns(E[k2]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j3s2`='1', `j3s3`='1' where nomcomplt like '%"+E[k2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1336,8 +1322,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
-                                                        String update = "UPDATE planningds SET j3s3='1' where nomcomplt like '%"+E[k2]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j3s3='1' where nomcomplt like '%"+E[k2]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1349,19 +1334,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S4"))
-                           {    System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(k3<E.length)
                                         {
-                                            System.out.println(E[k3]);
+                                           
                                             String nom =GradeEns(E[k3]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j3s3`='1', `j3s4`='1' where nomcomplt like '%"+E[k3]+"%' ";
+                                                    {   String update = "UPDATE planningds SET `j3s3`='1', `j3s4`='1' where nomcomplt like '%"+E[k3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -1372,8 +1356,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
-                                                        String update = "UPDATE planningds SET j3s4='1' where nomcomplt like '%"+E[k3]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j3s4='1' where nomcomplt like '%"+E[k3]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1386,7 +1369,7 @@ private void plannning1()
                      if(i==7)
            
            { 
-               System.out.println(G[i]);
+              
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -1394,8 +1377,7 @@ private void plannning1()
               
                {
                if(A[compteur].equals("S1"))
-                {   System.out.println(A[compteur]);
-                    String Ens = K(G[i],A[compteur]);
+                {   String Ens = K(G[i],A[compteur]);
                     String[] E =Ens.split("  ");
                     while(a<E.length)
                      { 
@@ -1403,7 +1385,7 @@ private void plannning1()
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {
                             try
-                                {System.out.println("CV T3ADA");
+                                {
                                     String update = "UPDATE planningds SET `j4s1`='1', `j4s2`='1' where nomcomplt like '%"+E[a]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -1415,7 +1397,7 @@ private void plannning1()
                         }else
                         {
                             try
-                                       {System.out.println("CV T3ADA");
+                                       {
                                         String update = "UPDATE planningds SET j4s1='1' where nomcomplt like '%"+E[a]+"%' ";
                                         pst = connection.prepareStatement(update);
                                         pst.execute();
@@ -1428,18 +1410,18 @@ private void plannning1()
                         }
                         else
                    if(A[compteur].equals("S2"))
-                           {   System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(a1<E.length)
                                         {
-                                            System.out.println(E[a1]);
+                                          
                                             String nom =GradeEns(E[a1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j4s1`='1', `j4s2`='1' where nomcomplt like '%"+E[a1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1451,7 +1433,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j4s2='1' where nomcomplt like '%"+E[a1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1464,18 +1446,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S3"))
-                           {    System.out.println(A[compteur]);
-                               String Ens = K(G[i],A[compteur]);
+                           {    
+                       String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(a2<E.length)
                                         {
-                                            System.out.println(E[a2]);
+                                        
                                             String nom =GradeEns(E[a2]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j4s2`='1', `j4s3`='1' where nomcomplt like '%"+E[a2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1487,7 +1469,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j4s3='1' where nomcomplt like '%"+E[a2]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1500,18 +1482,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S4"))
-                           {    System.out.println(A[compteur]);
-                               String Ens = K(G[i],A[compteur]);
+                           {    
+                       String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(a3<E.length)
                                         {
-                                            System.out.println(E[a3]);
+                       
                                             String nom =GradeEns(E[a3]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j4s3`='1', `j4s4`='1' where nomcomplt like '%"+E[a3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1523,7 +1505,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j4s4='1' where nomcomplt like '%"+E[a3]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1538,7 +1520,7 @@ private void plannning1()
                if(i==9)
            
            {   
-               System.out.println(G[i]);
+               
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -1546,7 +1528,7 @@ private void plannning1()
               
                {
                if(A[compteur].equals("S1"))
-                {   System.out.println(A[compteur]);
+                {   
                     String Ens = K(G[i],A[compteur]);
                     String[] E =Ens.split("  ");
                     while(s<E.length)
@@ -1555,7 +1537,7 @@ private void plannning1()
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {
                             try
-                                {System.out.println("CV T3ADA");
+                                {
                                     String update = "UPDATE planningds SET `j5s1`='1', `j5s2`='1' where nomcomplt like '%"+E[s]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -1567,7 +1549,7 @@ private void plannning1()
                         }else
                         {
                             try
-                                       {System.out.println("CV T3ADA");
+                                       {
                                         String update = "UPDATE planningds SET j5s1='1' where nomcomplt like '%"+E[s]+"%' ";
                                         pst = connection.prepareStatement(update);
                                         pst.execute();
@@ -1580,19 +1562,18 @@ private void plannning1()
                         }
                         else
                    if(A[compteur].equals("S2"))
-                           {   System.out.println(A[compteur]);
+                           {   
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(s1<E.length)
                                         {
-                                            System.out.println(E[s1]);
+                                           
                                             String nom =GradeEns(E[s1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j5s1`='1', `j5s2`='1' where nomcomplt like '%"+E[s1]+"%' ";
+                                                    {   String update = "UPDATE planningds SET `j5s1`='1', `j5s2`='1' where nomcomplt like '%"+E[s1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -1603,7 +1584,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j5s2='1' where nomcomplt like '%"+E[s1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1616,19 +1597,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S3"))
-                           {    System.out.println(A[compteur]);
-                               String Ens = K(G[i],A[compteur]);
+                           {  
+                       String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(s2<E.length)
                                         {
-                                            System.out.println(E[s2]);
+                                           
                                             String nom =GradeEns(E[s2]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j5s2`='1', `j5s3`='1' where nomcomplt like '%"+E[s2]+"%' ";
+                                                    {  String update = "UPDATE planningds SET `j5s2`='1', `j5s3`='1' where nomcomplt like '%"+E[s2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -1639,7 +1619,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j5s3='1' where nomcomplt like '%"+E[s2]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1652,18 +1632,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S4"))
-                           {    System.out.println(A[compteur]);
+                           {    
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(s3<E.length)
                                         {
-                                            System.out.println(E[s3]);
+                                           
                                             String nom =GradeEns(E[s3]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j5s3`='1', `j5s4`='1' where nomcomplt like '%"+E[s3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1675,7 +1655,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j5s4='1' where nomcomplt like '%"+E[s3]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1690,7 +1670,7 @@ private void plannning1()
                    if(i==11)
            
            {
-               System.out.println(G[i]);
+                       
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -1698,8 +1678,8 @@ private void plannning1()
               
                {
                if(A[compteur].equals("S1"))
-                {   System.out.println(A[compteur]);
-                    String Ens = K(G[i],A[compteur]);
+                {   
+                   String Ens = K(G[i],A[compteur]);
                     String[] E =Ens.split("  ");
                     
                     while(l<E.length)
@@ -1708,7 +1688,8 @@ private void plannning1()
                          if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {
                             try
-                                {System.out.println("CV T3ADA");
+                                {
+                                
                                     String update = "UPDATE planningds SET `j6s1`='1', `j6s2`='1' where nomcomplt like '%"+E[l]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -1720,7 +1701,7 @@ private void plannning1()
                         }else
                         {
                             try
-                                       {System.out.println("CV T3ADA");
+                                       {
                                         String update = "UPDATE planningds SET j6s1='1' where nomcomplt like '%"+E[l]+"%' ";
                                         pst = connection.prepareStatement(update);
                                         pst.execute();
@@ -1733,18 +1714,18 @@ private void plannning1()
                         }
                         else
                    if(A[compteur].equals("S2"))
-                           {   System.out.println(A[compteur]);
+                           {  
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(l1<E.length)
                                         {
-                                            System.out.println(E[l1]);
+                                            
                                             String nom =GradeEns(E[l1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j6s1`='1', `j6s2`='1' where nomcomplt like '%"+E[l1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1756,7 +1737,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j6s2='1' where nomcomplt like '%"+E[l1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1769,18 +1750,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S3"))
-                           {    System.out.println(A[compteur]);
+                           {    
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(l2<E.length)
                                         {
-                                            System.out.println(E[l2]);
+                                
                                             String nom =GradeEns(E[l2]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
+                                                    {
                                                         String update = "UPDATE planningds SET `j6s2`='1', `j6s3`='1' where nomcomplt like '%"+E[l2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1792,8 +1773,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
-                                                        String update = "UPDATE planningds SET j6s3='1' where nomcomplt like '%"+E[l2]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j6s3='1' where nomcomplt like '%"+E[l2]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -1805,19 +1785,18 @@ private void plannning1()
                                         }
                                     
                            }else if(A[compteur].equals("S4"))
-                           {    System.out.println(A[compteur]);
+                           {    
                                String Ens = K(G[i],A[compteur]);
                                String[] E =Ens.split("  ");
                                 
                                         while(k<E.length)
                                         {
-                                            System.out.println(E[l3]);
+                                           
                                             String nom =GradeEns(E[l3]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA"+nom);
-                                                        String update = "UPDATE planningds SET `j6s3`='1', `j6s4`='1' where nomcomplt like '%"+E[l3]+"%' ";
+                                                    {   String update = "UPDATE planningds SET `j6s3`='1', `j6s4`='1' where nomcomplt like '%"+E[l3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                     }catch (SQLException e)
@@ -1828,7 +1807,7 @@ private void plannning1()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningds SET j6s4='1' where nomcomplt like '%"+E[l3]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -1879,7 +1858,6 @@ private int nbSurvillance(String nomc)
                 e1.printStackTrace();
             }
 i = Integer.parseInt(N);
-System.out.println("il asteth il fleni haw 9adech 3ase"+i);
 return i;
 }
 
@@ -1898,8 +1876,8 @@ try {
                     ex.printStackTrace();
                 }
 i = Integer.parseInt(L);
-System.out.println(" le grade max est "+i);   
-return i;
+
+ return i;
 }
 private int minsurgrade(String grade)
 {int i=0;
@@ -1917,7 +1895,7 @@ try {
                     ex.printStackTrace();
                 }
 i = Integer.parseInt(L);
-System.out.println("le grade min"+i);   
+
 return i;
 }
 
@@ -1930,7 +1908,7 @@ private int minid()
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(i);
+             
             }
         
         
@@ -1948,7 +1926,7 @@ private int minid()
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(i);
+            
             }
         
         
@@ -1968,7 +1946,7 @@ String l="";
             while(rs.next())
             {
             l=rs.getString(1);
-             System.out.println(l);
+            
             }
         
         
@@ -2135,7 +2113,7 @@ i++;}
    
    int j= S1Mecom(Date,S),d=S1Mbds(Date,S),e=S1Wi(Date,S),c=S1vic(Date,S);
    i=j+d+e+c;
-   System.out.println(i);
+   
    return i;
    }
    
@@ -2143,7 +2121,7 @@ private int Salle2m(String Date,String S)
    {int i;
    int j= S2Mecom(Date,S),d=S2Mbds(Date,S),e=S2wi(Date,S),c=S2vic(Date,S);
    i=j+d+e+c;
-   System.out.println(i);
+   
    return i;
    }
 private String S2L1(String date,String S)
@@ -2246,7 +2224,7 @@ private String S2L1(String date,String S)
    } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-   System.out.println(i);
+   
    return i;
    }
    private String S2T2(String date,String S)
@@ -2267,7 +2245,7 @@ private String S2L1(String date,String S)
    } catch (SQLException ex) {
                     ex.printStackTrace();
                  }
- System.out.println(z);             
+           
    return z;
    }
    private String S3T1(String date,String S)
@@ -2395,7 +2373,7 @@ private String S2L1(String date,String S)
    {int i;
    int j= nb(Date,S),d=nb2(Date,S),e=nb3(Date,S);
    i=j+d+e;
-   System.out.println("les salle sont :"+i);
+   
    return i;
    }
    private int nb(String Date,String S)
@@ -2408,8 +2386,8 @@ private String S2L1(String date,String S)
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
-   return i;
+   
+    return i;
    }
    private int nb2(String Date,String S)
    {int i;
@@ -2421,7 +2399,7 @@ private String S2L1(String date,String S)
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int nb3(String Date,String S)
@@ -2436,7 +2414,7 @@ private String S2L1(String date,String S)
     
    }
    else i=0;
-   System.out.println(i);
+   
    return i;
    }
     private int nb3l(String Date,String S)
@@ -2449,7 +2427,7 @@ private String S2L1(String date,String S)
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int nb31(String Date,String S)
@@ -2462,7 +2440,7 @@ private String S2L1(String date,String S)
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+  
    return i;
    }
    private int nb32(String Date,String S)
@@ -2477,14 +2455,14 @@ private String S2L1(String date,String S)
     
    }
    else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int Salle3eme(String Date,String S)
    {int i;
    int j= nb3l(Date,S),d=nb31(Date,S),e=nb32(Date,S);
    i=j+d+e;
-   System.out.println(i);
+   
    return i;
    }
    private String SalleDisponibles(String date,String S)
@@ -2582,7 +2560,6 @@ private String S2L1(String date,String S)
     }
     else i=4;   
    }else i=0;
-   System.out.println("les salle sont"+i);
    return i;
    }
    private String Salle1T(String date,String S)
@@ -2685,7 +2662,6 @@ private String S2L1(String date,String S)
         {i=i+2;}   
    }
    else{ i=0;}
-   System.out.println("les salle sont"+i);
    return i;
    }
    private boolean existe(String Jour,String nom)
@@ -2724,7 +2700,7 @@ private int exp(String Jour,String nom)
         {
             if(i==0)
                 {
-                    System.out.println(G[i]);
+                  
                         String hor=horaire1S1();
                         String []A=hor.split(" ");
 
@@ -2732,8 +2708,7 @@ private int exp(String Jour,String nom)
                         while(cop<A.length)
                         {
                             if(A[cop].equals("S1"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
-                                int K=nombensg("j1s1");  
+                            {   int K=nombensg("j1s1");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -2747,31 +2722,21 @@ private int exp(String Jour,String nom)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s<nb)
                                 {
-
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s);
-                                        System.out.println(lis[n]);
-                                        int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                       int nbsur=nbSurvillance(lis[n]);
+                                        
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j1s1",lis[n]);
-                                        System.out.println(SS);
                                         boolean SSS=existe("j1s2",lis[n]);
-                                        System.out.println(SSS);
-                                        boolean SSSS=existe("j1s3",lis[n]);
-                                        System.out.println(SSSS);
+                                     boolean SSSS=existe("j1s3",lis[n]);
                                         boolean SSSSS=existe("j1s4",lis[n]);
-                                        System.out.println(SSSSS);
-
+                                     
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                         {
-                                            System.out.println("d5el lhne");
                                                 if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
 
-                                                        try{System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j1s1='1',j1s2='1',j1s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
+                                                        try{String update = "UPDATE planningds SET j1s1='1',j1s2='1',j1s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                         } catch (SQLException e)
@@ -2782,7 +2747,7 @@ private int exp(String Jour,String nom)
                                                         s++;
                                                 }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&SSSSS==false))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j1s1='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -2798,7 +2763,7 @@ private int exp(String Jour,String nom)
                                 n++;
                                 }
               }else if (A[cop].equals("S2"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
+              { 
                   int K=nombensg("j1s2");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -2813,31 +2778,29 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s1<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s1);
-                        System.out.println(lis[n1]);
+                       
                         int nbsur=nbSurvillance(lis[n1]);
-                        System.out.println(n1);
+                        
                         String nom =GradeEns(lis[n1]);
                         int max=maxsurgrade(nom);
 
                         boolean SS=existe("j1s1",lis[n1]);
-                        System.out.println(SS);
+                        
                         boolean SSS=existe("j1s2",lis[n1]);
-                        System.out.println(SSS);
+                       
                         boolean SSSS=existe("j1s3",lis[n1]);
-                        System.out.println(SSSS);
+                       
                         boolean SSSSS=existe("j1s4",lis[n1]);
-                        System.out.println(SSSSS);
+                       
 
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
+                            { 
 
                                     if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                           
                                             String update = "UPDATE planningds SET`j1s2`='1',j1s3='1',j1s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -2853,7 +2816,6 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET j1s2='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -2865,7 +2827,8 @@ private int exp(String Jour,String nom)
                                        s1++;
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
+                                                                
                                                         String update = "UPDATE planningds SET j1s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -2882,7 +2845,7 @@ private int exp(String Jour,String nom)
                     }
               }else
                   if(A[cop].equals("S3"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
+                            {   
                                 int K=nombensg("j1s3");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -2897,30 +2860,25 @@ private int exp(String Jour,String nom)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s2<nb)
                                 {
-
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s2);
-                                        System.out.println(lis[n2]);
                                         int nbsur=nbSurvillance(lis[n2]);
-                                        System.out.println(n2);
                                         String nom =GradeEns(lis[n2]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j1s1",lis[n2]);
-                                        System.out.println(SS);
-                                        boolean SSS=existe("j1s2",lis[n2]);
-                                        System.out.println(SSS);
-                                        boolean SSSS=existe("j1s3",lis[n2]);
-                                        System.out.println(SSSS);
-                                        boolean SSSSS=existe("j1s4",lis[n2]);
-                                        System.out.println(SSSSS);
-
+                                 
+                                    boolean SSS=existe("j1s2",lis[n2]);
+                                    
+                                    boolean SSSS=existe("j1s3",lis[n2]);
+                                    
+                                    boolean SSSSS=existe("j1s4",lis[n2]);
+                                    
+                                    
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                        { System.out.println("d5el lhne");
-                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        { 
+                                        if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
+                                                        
                                                         String update = "UPDATE planningds SET j1s1='1',`j1s2`='1',j1s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -2936,7 +2894,7 @@ private int exp(String Jour,String nom)
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
+                                                       
                                                         String update = "UPDATE planningds SET j1s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -2949,7 +2907,7 @@ private int exp(String Jour,String nom)
                                                 }
                                     else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j1s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -2965,8 +2923,7 @@ private int exp(String Jour,String nom)
                            n2++;
                                 }}
               else if (A[cop].equals("S4"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
-                  int K=nombensg("j1s4");  
+              {   int K=nombensg("j1s4");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
                   int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -2980,30 +2937,21 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s3<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s3);
-                        System.out.println(lis[n3]);
                         int nbsur=nbSurvillance(lis[n3]);
-                        System.out.println(n3);
                         String nom =GradeEns(lis[n3]);
                         int max=maxsurgrade(nom);
                         boolean SS=existe("j1s1",lis[n3]);
-                        System.out.println(SS);
                         boolean SSS=existe("j1s2",lis[n3]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j1s3",lis[n3]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j1s4",lis[n3]);
-                        System.out.println(SSSSS);
-
+                 
+                      
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
+                            { if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                              
                                             String update = "UPDATE planningds SET`j1s2`='1',j1s3='1',j1s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3019,7 +2967,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                            
                                             String update = "UPDATE planningds SET j1s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3032,7 +2980,7 @@ private int exp(String Jour,String nom)
 
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j1s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3054,7 +3002,6 @@ private int exp(String Jour,String nom)
  else 
             if(i==2)
                 {
-                        System.out.println(G[i]);
                         String hor=horaire1S1();
                         String []A=hor.split(" ");
 
@@ -3062,8 +3009,7 @@ private int exp(String Jour,String nom)
                         while(cop<A.length)
                         {
                             if(A[cop].equals("S1"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
-                                int K=nombensg("j2s1");  
+                            {  int K=nombensg("j2s1");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -3078,29 +3024,26 @@ private int exp(String Jour,String nom)
                                 while(nb!=0&&s<nb)
                                 {
 
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s);
-                                        System.out.println(lis[n]);
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                        
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j2s1",lis[n]);
-                                        System.out.println(SS);
+                                       
                                         boolean SSS=existe("j2s2",lis[n]);
-                                        System.out.println(SSS);
+                                        
                                         boolean SSSS=existe("j2s3",lis[n]);
-                                        System.out.println(SSSS);
+                                        
                                         boolean SSSSS=existe("j2s4",lis[n]);
-                                        System.out.println(SSSSS);
-
+                                    
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                         {
-                                            System.out.println("d5el lhne");
-                                                if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                 
+                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
 
-                                                        try{System.out.println("9a3ed yt3ada");
+                                                        try{
+                                                            
                                                         String update = "UPDATE planningds SET j2s1='1',j2s2='1',j2s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3112,7 +3055,7 @@ private int exp(String Jour,String nom)
                                                         s++;
                                                 }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&SSSSS==false))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j2s1='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3128,8 +3071,7 @@ private int exp(String Jour,String nom)
                                 n++;
                                 }
               }else if (A[cop].equals("S2"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
-                  int K=nombensg("j2s2");  
+              {  int K=nombensg("j2s2");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
                   int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -3143,31 +3085,24 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s1<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s1);
-                        System.out.println(lis[n1]);
                         int nbsur=nbSurvillance(lis[n1]);
-                        System.out.println(n1);
+                       
                         String nom =GradeEns(lis[n1]);
                         int max=maxsurgrade(nom);
 
                         boolean SS=existe("j2s1",lis[n1]);
-                        System.out.println(SS);
+                      
                         boolean SSS=existe("j2s2",lis[n1]);
-                        System.out.println(SSS);
+                        
                         boolean SSSS=existe("j2s3",lis[n1]);
-                        System.out.println(SSSS);
-                        boolean SSSSS=existe("j2s4",lis[n1]);
-                        System.out.println(SSSSS);
-
+                       
+                      boolean SSSSS=existe("j2s4",lis[n1]);
+                      
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                            {       if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET`j2s2`='1',j2s3='1',j2s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3183,7 +3118,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                           
                                             String update = "UPDATE planningds SET j2s2='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3195,7 +3130,7 @@ private int exp(String Jour,String nom)
                                        s1++;
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j2s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3212,7 +3147,7 @@ private int exp(String Jour,String nom)
                     }
               }else
                   if(A[cop].equals("S3"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
+                            {  
                                 int K=nombensg("j1s3");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3226,32 +3161,19 @@ private int exp(String Jour,String nom)
                                 int s2=K+nombre;
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s2<nb)
-                                {
-
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s2);
-                                        System.out.println(lis[n2]);
-                                        int nbsur=nbSurvillance(lis[n2]);
-                                        System.out.println(n2);
+                                {int nbsur=nbSurvillance(lis[n2]);
                                         String nom =GradeEns(lis[n2]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j2s1",lis[n2]);
-                                        System.out.println(SS);
                                         boolean SSS=existe("j2s2",lis[n2]);
-                                        System.out.println(SSS);
                                         boolean SSSS=existe("j2s3",lis[n2]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j2s4",lis[n2]);
-                                        System.out.println(SSSSS);
-
+                                 
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                        { System.out.println("d5el lhne");
-                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        {   if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
                                                     try
-                                                    {
-                                                        System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j2s1='1',`j2s2`='1',j2s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j2s1='1',`j2s2`='1',j2s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                    } catch (SQLException e)
@@ -3266,7 +3188,7 @@ private int exp(String Jour,String nom)
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
+                                                     
                                                         String update = "UPDATE planningds SET j2s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3279,7 +3201,7 @@ private int exp(String Jour,String nom)
                                                 }
                                     else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j2s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3295,7 +3217,7 @@ private int exp(String Jour,String nom)
                            n2++;
                                 }}
               else if (A[cop].equals("S4"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
+              {  
                   int K=nombensg("j2s4");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3310,30 +3232,27 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s3<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s3);
-                        System.out.println(lis[n3]);
+                      
                         int nbsur=nbSurvillance(lis[n3]);
-                        System.out.println(n3);
+                
                         String nom =GradeEns(lis[n3]);
                         int max=maxsurgrade(nom);
                         boolean SS=existe("j2s1",lis[n3]);
-                        System.out.println(SS);
+                        
                         boolean SSS=existe("j2s2",lis[n3]);
-                        System.out.println(SSS);
+                    
                         boolean SSSS=existe("j2s3",lis[n3]);
-                        System.out.println(SSSS);
+                       
                         boolean SSSSS=existe("j2s4",lis[n3]);
-                        System.out.println(SSSSS);
+                       
 
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
+                            { 
                                     if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                          
                                             String update = "UPDATE planningds SET`j2s2`='1',j1s3='1',j2s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3348,9 +3267,7 @@ private int exp(String Jour,String nom)
                                     if(nbsur<=max && ((SSSSS==true && SSSS==true)&&(SS==false&&SSS==false) ))
                                     {
                                         try
-                                        {
-                                            System.out.println("9a3ed yt3ada");
-                                            String update = "UPDATE planningds SET j2s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
+                                        {  String update = "UPDATE planningds SET j2s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
                                        } catch (SQLException e)
@@ -3362,7 +3279,7 @@ private int exp(String Jour,String nom)
 
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j2s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3381,7 +3298,7 @@ private int exp(String Jour,String nom)
               cop++;}
                 }
         else if(i==4)
-        {                 System.out.println(G[i]);
+        {              
                         String hor=horaire1S1();
                         String []A=hor.split(" ");
 
@@ -3389,8 +3306,7 @@ private int exp(String Jour,String nom)
                         while(cop<A.length)
                         {
                             if(A[cop].equals("S1"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
-                                int K=nombensg("j3s1");  
+                            {   int K=nombensg("j3s1");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -3405,29 +3321,21 @@ private int exp(String Jour,String nom)
                                 while(nb!=0&&s<nb)
                                 {
 
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s);
-                                        System.out.println(lis[n]);
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j3s1",lis[n]);
-                                        System.out.println(SS);
                                         boolean SSS=existe("j3s2",lis[n]);
-                                        System.out.println(SSS);
                                         boolean SSSS=existe("j3s3",lis[n]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j3s4",lis[n]);
-                                        System.out.println(SSSSS);
-
+                              
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                         {
-                                            System.out.println("d5el lhne");
+                                            
                                                 if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
 
-                                                        try{System.out.println("9a3ed yt3ada");
+                                                        try{
                                                         String update = "UPDATE planningds SET j3s1='1',j3s2='1',j3s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3439,7 +3347,7 @@ private int exp(String Jour,String nom)
                                                         s++;
                                                 }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&SSSSS==false))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j3s1='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3455,7 +3363,7 @@ private int exp(String Jour,String nom)
                                 n++;
                                 }
               }else if (A[cop].equals("S2"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
+              {  
                   int K=nombensg("j3s2");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3470,31 +3378,25 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s1<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s1);
-                        System.out.println(lis[n1]);
+                       
                         int nbsur=nbSurvillance(lis[n1]);
-                        System.out.println(n1);
                         String nom =GradeEns(lis[n1]);
                         int max=maxsurgrade(nom);
 
                         boolean SS=existe("j3s1",lis[n1]);
-                        System.out.println(SS);
                         boolean SSS=existe("j3s2",lis[n1]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j3s3",lis[n1]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j3s4",lis[n1]);
-                        System.out.println(SSSSS);
-
+                       
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
+                            { 
+                            
 
                                     if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                         
                                             String update = "UPDATE planningds SET`j3s2`='1',j3s3='1',j3s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3510,7 +3412,6 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET j3s2='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3522,7 +3423,8 @@ private int exp(String Jour,String nom)
                                        s1++;
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
+                                                                
                                                         String update = "UPDATE planningds SET j3s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3538,7 +3440,7 @@ private int exp(String Jour,String nom)
                     }
               }else
                   if(A[cop].equals("S3"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
+                            {  
                                 int K=nombensg("j3s3");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3554,29 +3456,24 @@ private int exp(String Jour,String nom)
                                 while(nb!=0&&s2<nb)
                                 {
 
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s2);
-                                        System.out.println(lis[n2]);
                                         int nbsur=nbSurvillance(lis[n2]);
-                                        System.out.println(n2);
+                                      
                                         String nom =GradeEns(lis[n2]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j3s1",lis[n2]);
-                                        System.out.println(SS);
+                                       
                                         boolean SSS=existe("j3s2",lis[n2]);
-                                        System.out.println(SSS);
-                                        boolean SSSS=existe("j3s3",lis[n2]);
-                                        System.out.println(SSSS);
-                                        boolean SSSSS=existe("j3s4",lis[n2]);
-                                        System.out.println(SSSSS);
-
+                                       
+                                    boolean SSSS=existe("j3s3",lis[n2]);
+                                    
+                                    boolean SSSSS=existe("j3s4",lis[n2]);
+                                        
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                        { System.out.println("d5el lhne");
-                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        {   if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
+                                                      
                                                         String update = "UPDATE planningds SET j3s1='1',`j3s2`='1',j3s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3592,7 +3489,7 @@ private int exp(String Jour,String nom)
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
+                                                      
                                                         String update = "UPDATE planningds SET j3s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3605,7 +3502,7 @@ private int exp(String Jour,String nom)
                                                 }
                                     else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j3s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3621,7 +3518,7 @@ private int exp(String Jour,String nom)
                            n2++;
                                 }}
               else if (A[cop].equals("S4"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
+              {   
                   int K=nombensg("j3s4");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3636,30 +3533,21 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s3<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s3);
-                        System.out.println(lis[n3]);
                         int nbsur=nbSurvillance(lis[n3]);
-                        System.out.println(n3);
                         String nom =GradeEns(lis[n3]);
                         int max=maxsurgrade(nom);
                         boolean SS=existe("j3s1",lis[n3]);
-                        System.out.println(SS);
-                        boolean SSS=existe("j3s2",lis[n3]);
-                        System.out.println(SSS);
+                  
+                      boolean SSS=existe("j3s2",lis[n3]);
                         boolean SSSS=existe("j3s3",lis[n3]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j3s4",lis[n3]);
-                        System.out.println(SSSSS);
-
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
+                            { 
                                     if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                          
                                             String update = "UPDATE planningds SET`j3s2`='1',j3s3='1',j3s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3675,7 +3563,6 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET j3s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3688,7 +3575,7 @@ private int exp(String Jour,String nom)
 
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j3s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3710,7 +3597,7 @@ private int exp(String Jour,String nom)
         else 
             if(i==6)
                 {
-                        System.out.println(G[i]);
+                       
                         String hor=horaire1S1();
                         String []A=hor.split(" ");
 
@@ -3718,8 +3605,7 @@ private int exp(String Jour,String nom)
                         while(cop<A.length)
                         {
                             if(A[cop].equals("S1"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
-                                int K=nombensg("j4s1");  
+                            {                                   int K=nombensg("j4s1");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -3732,31 +3618,25 @@ private int exp(String Jour,String nom)
                                 int s=K+nombre;
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s<nb)
-                                {
-
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s);
-                                        System.out.println(lis[n]);
-                                        int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                {   int nbsur=nbSurvillance(lis[n]);
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j4s1",lis[n]);
-                                        System.out.println(SS);
-                                        boolean SSS=existe("j4s2",lis[n]);
-                                        System.out.println(SSS);
-                                        boolean SSSS=existe("j4s3",lis[n]);
-                                        System.out.println(SSSS);
-                                        boolean SSSSS=existe("j4s4",lis[n]);
-                                        System.out.println(SSSSS);
-
+                                 
+                                 boolean SSS=existe("j4s2",lis[n]);
+                                 
+                                 boolean SSSS=existe("j4s3",lis[n]);
+                                 
+                                 boolean SSSSS=existe("j4s4",lis[n]);
+                                 
+                                 
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                         {
-                                            System.out.println("d5el lhne");
-                                                if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                 
+                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
 
-                                                        try{System.out.println("9a3ed yt3ada");
+                                                        try{
                                                         String update = "UPDATE planningds SET j4s1='1',j4s2='1',j4s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3768,7 +3648,7 @@ private int exp(String Jour,String nom)
                                                         s++;
                                                 }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&SSSSS==false))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j4s1='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3784,7 +3664,7 @@ private int exp(String Jour,String nom)
                                 n++;
                                 }
               }else if (A[cop].equals("S2"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
+              {   
                   int K=nombensg("j4s2");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3799,31 +3679,24 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s1<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s1);
-                        System.out.println(lis[n1]);
+                       
                         int nbsur=nbSurvillance(lis[n1]);
-                        System.out.println(n1);
                         String nom =GradeEns(lis[n1]);
                         int max=maxsurgrade(nom);
 
                         boolean SS=existe("j4s1",lis[n1]);
-                        System.out.println(SS);
                         boolean SSS=existe("j4s2",lis[n1]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j4s3",lis[n1]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j4s4",lis[n1]);
-                        System.out.println(SSSSS);
-
+                    
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
+                            { 
+                            
                                     if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                          
                                             String update = "UPDATE planningds SET`j4s2`='1',j4s3='1',j4s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3839,7 +3712,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                           
                                             String update = "UPDATE planningds SET j4s2='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -3851,7 +3724,7 @@ private int exp(String Jour,String nom)
                                        s1++;
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j4s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3868,7 +3741,7 @@ private int exp(String Jour,String nom)
                     }
               }else
                   if(A[cop].equals("S3"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
+                            { 
                                 int K=nombensg("j4s3");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3883,30 +3756,21 @@ private int exp(String Jour,String nom)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s2<nb)
                                 {
+          int nbsur=nbSurvillance(lis[n2]);
 
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s2);
-                                        System.out.println(lis[n2]);
-                                        int nbsur=nbSurvillance(lis[n2]);
-                                        System.out.println(n2);
-                                        String nom =GradeEns(lis[n2]);
+                                    String nom =GradeEns(lis[n2]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j4s1",lis[n2]);
-                                        System.out.println(SS);
-                                        boolean SSS=existe("j4s2",lis[n2]);
-                                        System.out.println(SSS);
+                                    
+                                    boolean SSS=existe("j4s2",lis[n2]);
                                         boolean SSSS=existe("j4s3",lis[n2]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j4s4",lis[n2]);
-                                        System.out.println(SSSSS);
-
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                        { System.out.println("d5el lhne");
-                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        {   if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
+                                                        
                                                         String update = "UPDATE planningds SET j4s1='1',`j4s2`='1',j4s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3922,7 +3786,6 @@ private int exp(String Jour,String nom)
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
                                                         String update = "UPDATE planningds SET j4s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3935,7 +3798,7 @@ private int exp(String Jour,String nom)
                                                 }
                                     else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j4s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -3951,7 +3814,7 @@ private int exp(String Jour,String nom)
                            n2++;
                                 }}
               else if (A[cop].equals("S4"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
+              {  
                   int K=nombensg("j4s4");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3966,30 +3829,19 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s3<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s3);
-                        System.out.println(lis[n3]);
+                       
                         int nbsur=nbSurvillance(lis[n3]);
-                        System.out.println(n3);
                         String nom =GradeEns(lis[n3]);
                         int max=maxsurgrade(nom);
                         boolean SS=existe("j4s1",lis[n3]);
-                        System.out.println(SS);
                         boolean SSS=existe("j4s2",lis[n3]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j4s3",lis[n3]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j4s4",lis[n3]);
-                        System.out.println(SSSSS);
-
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
+                            {       if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET`j4s2`='1',j4s3='1',j4s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4005,7 +3857,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                          
                                             String update = "UPDATE planningds SET j4s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4018,7 +3870,7 @@ private int exp(String Jour,String nom)
 
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j4s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4039,15 +3891,14 @@ private int exp(String Jour,String nom)
                 }else
                 if(i==8)
                  {
-                                      System.out.println(G[i]);
-                        String hor=horaire1S1();
+                                       String hor=horaire1S1();
                         String []A=hor.split(" ");
 
                         int cop=1;
                         while(cop<A.length)
                         {
                             if(A[cop].equals("S1"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
+                            {   
                                 int K=nombensg("j5s1");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4063,30 +3914,20 @@ private int exp(String Jour,String nom)
                                 while(nb!=0&&s<nb)
                                 {
 
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s);
-                                        System.out.println(lis[n]);
+                                        
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j5s1",lis[n]);
-                                        System.out.println(SS);
                                         boolean SSS=existe("j5s2",lis[n]);
-                                        System.out.println(SSS);
                                         boolean SSSS=existe("j5s3",lis[n]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j5s4",lis[n]);
-                                        System.out.println(SSSSS);
-
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                         {
-                                            System.out.println("d5el lhne");
-                                                if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        
+                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
-
-                                                        try{System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j5s1='1',j5s2='1',j5s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
+            String update = "UPDATE planningds SET j5s1='1',j5s2='1',j5s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                         } catch (SQLException e)
@@ -4097,7 +3938,7 @@ private int exp(String Jour,String nom)
                                                         s++;
                                                 }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&SSSSS==false))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j5s1='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4113,8 +3954,7 @@ private int exp(String Jour,String nom)
                                 n++;
                                 }
               }else if (A[cop].equals("S2"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
-                  int K=nombensg("j5s2");  
+              {   int K=nombensg("j5s2");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
                   int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4128,31 +3968,20 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s1<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s1);
-                        System.out.println(lis[n1]);
                         int nbsur=nbSurvillance(lis[n1]);
-                        System.out.println(n1);
                         String nom =GradeEns(lis[n1]);
                         int max=maxsurgrade(nom);
 
                         boolean SS=existe("j5s1",lis[n1]);
-                        System.out.println(SS);
+                      
                         boolean SSS=existe("j5s2",lis[n1]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j5s3",lis[n1]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j5s4",lis[n1]);
-                        System.out.println(SSSSS);
-
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                            {       if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET`j5s2`='1',j5s3='1',j5s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4168,7 +3997,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                            
                                             String update = "UPDATE planningds SET j5s2='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4180,7 +4009,8 @@ private int exp(String Jour,String nom)
                                        s1++;
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
+                                                                
                                                         String update = "UPDATE planningds SET j5s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4197,7 +4027,7 @@ private int exp(String Jour,String nom)
                     }
               }else
                   if(A[cop].equals("S3"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
+                            { 
                                 int K=nombensg("j1s3");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4213,29 +4043,22 @@ private int exp(String Jour,String nom)
                                 while(nb!=0&&s2<nb)
                                 {
 
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s2);
-                                        System.out.println(lis[n2]);
-                                        int nbsur=nbSurvillance(lis[n2]);
-                                        System.out.println(n2);
-                                        String nom =GradeEns(lis[n2]);
+                              
+                                    int nbsur=nbSurvillance(lis[n2]);
+                                    
+                                    String nom =GradeEns(lis[n2]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j5s1",lis[n2]);
-                                        System.out.println(SS);
+                                       
                                         boolean SSS=existe("j5s2",lis[n2]);
-                                        System.out.println(SSS);
                                         boolean SSSS=existe("j5s3",lis[n2]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j5s4",lis[n2]);
-                                        System.out.println(SSSSS);
-
+                                       
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                        { System.out.println("d5el lhne");
-                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        {   if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
                                                         String update = "UPDATE planningds SET j5s1='1',`j5s2`='1',j5s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4251,7 +4074,6 @@ private int exp(String Jour,String nom)
                                                 {
                                                     try
                                                     {
-                                                        System.out.println("9a3ed yt3ada");
                                                         String update = "UPDATE planningds SET j5s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4264,8 +4086,8 @@ private int exp(String Jour,String nom)
                                                 }
                                     else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j5s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
+                                                            try{
+                                                                String update = "UPDATE planningds SET j5s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                         } catch (SQLException e)
@@ -4280,8 +4102,7 @@ private int exp(String Jour,String nom)
                            n2++;
                                 }}
               else if (A[cop].equals("S4"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
-                  int K=nombensg("j5s4");  
+              {  int K=nombensg("j5s4");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
                   int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4295,30 +4116,20 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s3<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s3);
-                        System.out.println(lis[n3]);
+                       
                         int nbsur=nbSurvillance(lis[n3]);
-                        System.out.println(n3);
                         String nom =GradeEns(lis[n3]);
                         int max=maxsurgrade(nom);
                         boolean SS=existe("j5s1",lis[n3]);
-                        System.out.println(SS);
                         boolean SSS=existe("j5s2",lis[n3]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j5s3",lis[n3]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j5s4",lis[n3]);
-                        System.out.println(SSSSS);
-
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
+                            { if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                             
                                             String update = "UPDATE planningds SET`j5s2`='1',j5s3='1',j5s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4334,7 +4145,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                         
                                             String update = "UPDATE planningds SET j5s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4347,8 +4158,8 @@ private int exp(String Jour,String nom)
 
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j5s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
+                                                            try{
+                                                                String update = "UPDATE planningds SET j5s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                         } catch (SQLException e)
@@ -4368,7 +4179,7 @@ private int exp(String Jour,String nom)
                  }else 
                     if(i==10)
                     {
-                        System.out.println(G[i]);
+                   
                         String hor=horaire1S1();
                         String []A=hor.split(" ");
 
@@ -4376,8 +4187,7 @@ private int exp(String Jour,String nom)
                         while(cop<A.length)
                         {
                             if(A[cop].equals("S1"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
-                                int K=nombensg("j6s1");  
+                            {   int K=nombensg("j6s1");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4391,34 +4201,25 @@ private int exp(String Jour,String nom)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s<nb)
                                 {
-
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s);
-                                        System.out.println(lis[n]);
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j6s1",lis[n]);
-                                        System.out.println(SS);
                                         boolean SSS=existe("j6s2",lis[n]);
-                                        System.out.println(SSS);
                                         boolean SSSS=existe("j6s3",lis[n]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j6s4",lis[n]);
-                                        System.out.println(SSSSS);
-
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                         {
-                                            System.out.println("d5el lhne");
                                                 if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
 
-                                                        try{System.out.println("9a3ed yt3ada");
+                                                        try{
+                                                            
                                                         String update = "UPDATE planningds SET j6s1='1',j6s2='1',j6s3='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
-                                                        } catch (SQLException e)
+                                                        }
+                                                    catch (SQLException e)
                                                         {
                                                             e.printStackTrace();
 
@@ -4426,7 +4227,8 @@ private int exp(String Jour,String nom)
                                                         s++;
                                                 }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&SSSSS==false))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
+                                                                
                                                         String update = "UPDATE planningds SET j6s1='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4442,8 +4244,8 @@ private int exp(String Jour,String nom)
                                 n++;
                                 }
               }else if (A[cop].equals("S2"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
-                  int K=nombensg("j6s2");  
+              {  
+                                int K=nombensg("j6s2");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
                   int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4457,31 +4259,27 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s1<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s1);
-                        System.out.println(lis[n1]);
+                       
                         int nbsur=nbSurvillance(lis[n1]);
-                        System.out.println(n1);
+                       
                         String nom =GradeEns(lis[n1]);
                         int max=maxsurgrade(nom);
 
                         boolean SS=existe("j6s1",lis[n1]);
-                        System.out.println(SS);
+                      
                         boolean SSS=existe("j6s2",lis[n1]);
-                        System.out.println(SSS);
-                        boolean SSSS=existe("j6s3",lis[n1]);
-                        System.out.println(SSSS);
-                        boolean SSSSS=existe("j6s4",lis[n1]);
-                        System.out.println(SSSSS);
-
-                        if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                      
+                      boolean SSSS=existe("j6s3",lis[n1]);
+                      
+                      boolean SSSSS=existe("j6s4",lis[n1]);
+                      
+                      if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
+                            { 
+                          if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                          
                                             String update = "UPDATE planningds SET`j6s2`='1',j6s3='1',j6s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4497,7 +4295,6 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET j6s2='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4509,7 +4306,7 @@ private int exp(String Jour,String nom)
                                        s1++;
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j6s4='1' where nomcomplt  like '%"+lis[n1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4526,8 +4323,8 @@ private int exp(String Jour,String nom)
                     }
               }else
                   if(A[cop].equals("S3"))
-                            {   System.out.println("hana taw f loul"+ A[cop]);
-                                int K=nombensg("j6s3");  
+                            { 
+                      int K=nombensg("j6s3");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4541,31 +4338,20 @@ private int exp(String Jour,String nom)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s2<nb)
                                 {
-
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s2);
-                                        System.out.println(lis[n2]);
-                                        int nbsur=nbSurvillance(lis[n2]);
-                                        System.out.println(n2);
-                                        String nom =GradeEns(lis[n2]);
+                                    int nbsur=nbSurvillance(lis[n2]);
+                                    
+                                    String nom =GradeEns(lis[n2]);
                                         int max=maxsurgrade(nom);
                                         boolean SS=existe("j6s1",lis[n2]);
-                                        System.out.println(SS);
                                         boolean SSS=existe("j6s2",lis[n2]);
-                                        System.out.println(SSS);
                                         boolean SSSS=existe("j6s3",lis[n2]);
-                                        System.out.println(SSSS);
                                         boolean SSSSS=existe("j6s4",lis[n2]);
-                                        System.out.println(SSSSS);
-
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                        { System.out.println("d5el lhne");
-                                            if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
+                                        {
+                                        if(nbsur<=max && ((SS==false && SSS==false) && (SSSS==false&& SSSSS==false)))
                                                 {
                                                     try
-                                                    {
-                                                        System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j6s1='1',`j6s2`='1',j6s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j6s1='1',`j6s2`='1',j6s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                    } catch (SQLException e)
@@ -4579,9 +4365,7 @@ private int exp(String Jour,String nom)
                                                 if(nbsur<=max && (((SS==true &&SSS==true)&& (SSSS==false&& SSSSS==false)) ))
                                                 {
                                                     try
-                                                    {
-                                                        System.out.println("9a3ed yt3ada");
-                                                        String update = "UPDATE planningds SET j6s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
+                                                    {   String update = "UPDATE planningds SET j6s3='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
                                                    } catch (SQLException e)
@@ -4593,7 +4377,7 @@ private int exp(String Jour,String nom)
                                                 }
                                     else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j6s1='1' where nomcomplt  like '%"+lis[n2]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4609,8 +4393,7 @@ private int exp(String Jour,String nom)
                            n2++;
                                 }}
               else if (A[cop].equals("S4"))
-              {   System.out.println("hana taw f 2"+ A[cop]);
-                  int K=nombensg("j6s4");  
+              {   int K=nombensg("j6s4");  
                   int nbsalle1=nombsalle(G[i+1],A[cop]);
                   int nbsalle2=nombsalle1(G[i+1],A[cop]);
                   int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4624,30 +4407,19 @@ private int exp(String Jour,String nom)
                   int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                   while(nb!=0&&s3<=nb)
                     {
-                        System.out.println("les salle réservee sont: "+nb);
-                        System.out.println("les enseignatns y3esho"+s3);
-                        System.out.println(lis[n3]);
                         int nbsur=nbSurvillance(lis[n3]);
-                        System.out.println(n3);
                         String nom =GradeEns(lis[n3]);
                         int max=maxsurgrade(nom);
                         boolean SS=existe("j6s1",lis[n3]);
-                        System.out.println(SS);
                         boolean SSS=existe("j6s2",lis[n3]);
-                        System.out.println(SSS);
                         boolean SSSS=existe("j6s3",lis[n3]);
-                        System.out.println(SSSS);
                         boolean SSSSS=existe("j6s4",lis[n3]);
-                        System.out.println(SSSSS);
-
+                  
                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                            { System.out.println("d5el lhne");
-
-                                    if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
+                            {       if(nbsur<=max && ((SS==false && SSS==false)&&(SSSS==false&&SSSSS==false) ))
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
                                             String update = "UPDATE planningds SET`j6s2`='1',j6s3='1',j6s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4663,7 +4435,7 @@ private int exp(String Jour,String nom)
                                     {
                                         try
                                         {
-                                            System.out.println("9a3ed yt3ada");
+                                       
                                             String update = "UPDATE planningds SET j6s2='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                             pst = connection.prepareStatement(update);
                                             pst.execute();
@@ -4676,7 +4448,7 @@ private int exp(String Jour,String nom)
 
                                     }else if(nbsur<=max &&( (SSS==true && SSSS==true)&&(SSSSS==false&&SS==false)))
                                                 {
-                                                            try{System.out.println("9a3ed yt3ada");
+                                                            try{
                                                         String update = "UPDATE planningds SET j6s4='1' where nomcomplt  like '%"+lis[n3]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -4765,7 +4537,7 @@ private int exp(String Jour,String nom)
     @FXML
     void demarrer(ActionEvent event) {
         connection = handler.getConnection();
-        /**int i=entrejour();
+      int i=entrejour();
         if(i==0)
         {   Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Notification");
@@ -4798,7 +4570,7 @@ private int exp(String Jour,String nom)
                     alert.setContentText("Erreur de remplissage");
                     alert.showAndWait();
              }
-      /**  finally 
+        finally 
         {
                 try{
                       connection.close();
@@ -4811,7 +4583,7 @@ private int exp(String Jour,String nom)
                     alert.setContentText("planning déjà crée ,Veuillez cliquer sur \"afficher\" pour afficher le planning ou bien sur\"supprimer\" pour démarrer un nouveau planning");
                     alert.showAndWait();
         
-    }*/
+    }
         plannning1();
     }
 
@@ -4883,7 +4655,7 @@ private int exp(String Jour,String nom)
         d.open();
         
         d.add(new Paragraph("AVIS AUX ENSEIGNANTS"));
-        d.add(new Paragraph("ECOLE SUPERIEURE DE L’ECONOMIE NUMERIQUE",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD,BaseColor.BLUE)));
+        d.add(new Paragraph());
         d.add(new Paragraph("  "));
         d.add(new Paragraph("                           PLANNING  DES  SURVEILLANCES  DES EXAMENS ",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD)));
         d.add(new Paragraph("                           "+new Date().toString()));
