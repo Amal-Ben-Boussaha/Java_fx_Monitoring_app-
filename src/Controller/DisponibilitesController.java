@@ -142,11 +142,6 @@ public class DisponibilitesController implements Initializable {
             {
                 i+=1; 
                 String []value =line.split(",");
-                    for(String item : value)
-                    {
-                        System.out.print(item);
-                        System.out.println(i);
-                    }
                     
                     String sql="INSERT INTO disponibilites VALUES ("+i+",'"+value[0]+"',"+value[1]+","+value[2]+","+value[3]+","+value[4]+","+value[5]+","+value[6]+","+value[7]+",'"+value[8]+"')";
                     pst = connection.prepareStatement(sql);
@@ -221,7 +216,7 @@ public class DisponibilitesController implements Initializable {
          List<Disponibilites>lst = em.createQuery("SELECT d FROM Disponibilites d").getResultList();
          data=FXCollections.observableArrayList();
          for(Disponibilites lists:lst)
-         {   //System.out.println("kkk");
+         {  
            data.add(new Disponibilitesfx(lists.getIddisponibilites(),lists.getIdactivites(),lists.getDay(),lists.getHour(),lists.getClasse(),lists.getSubject(),lists.getTeachers(),lists.getActivitestages(),lists.getRom()));
          }
          tab_disp.setItems(data);
