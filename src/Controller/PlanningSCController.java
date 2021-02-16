@@ -234,7 +234,7 @@ public class PlanningSCController implements Initializable {
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(id);
+           
             }
         
         
@@ -350,7 +350,7 @@ public class PlanningSCController implements Initializable {
             while(rs.next())
             {
                 day6=day5+" "+rs.getString(1);
-                 System.out.println(day6);
+                
             }} catch (SQLException ex) 
         {
             ex.printStackTrace();
@@ -3758,19 +3758,15 @@ private int Salle2m(String Date,String S)
                             while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j6s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -3787,7 +3783,6 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
                                 int K=nombensg("j6s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3802,20 +3797,14 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            {   if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
                                                             String update = "UPDATE planningsc SET`j6s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -3837,8 +3826,7 @@ private int Salle2m(String Date,String S)
     
             else
                 if(i==12)
-                    {System.out.println(G[i]);
-                    String hor=horaire1S1();
+                    {String hor=horaire1S1();
                     String []A=hor.split(" ");
       
                     int cop=1;
@@ -3846,7 +3834,6 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
                             int K=nombensg("j7s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3859,25 +3846,20 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
+                            
                             while(nb!=0&&s<nb)
                               {
-                                  
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
+                                        
+                                        
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j7s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -3894,7 +3876,8 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
+                               
+                                
                                 int K=nombensg("j7s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3909,21 +3892,18 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
-                                        int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
-                                        String nom =GradeEns(lis[n]);
+                                       
+                                    int nbsur=nbSurvillance(lis[n]);
+                                    
+                                    String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
+                                            { 
                                                 if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
-                                                            String update = "UPDATE planningsc SET`j7s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
+                                                      String update = "UPDATE planningsc SET`j7s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
                                                        } catch (SQLException e)
@@ -3944,7 +3924,7 @@ private int Salle2m(String Date,String S)
     
         else 
                     if(i==14)
-                        {System.out.println(G[i]);
+                        {
                          String hor=horaire1S1();
                          String []A=hor.split(" ");
       
@@ -3953,7 +3933,6 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
                             int K=nombensg("j8s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3966,25 +3945,22 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
+                            
                             while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
+                                   
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
+                                       
+                                        
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j8s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4016,20 +3992,14 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            {  if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
                                                             String update = "UPDATE planningsc SET`j8s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4050,7 +4020,7 @@ private int Salle2m(String Date,String S)
              }
     
         else if(i==16)
-                    {System.out.println(G[i]);
+                    {
                     String hor=horaire1S1();
                     String []A=hor.split(" ");
       
@@ -4059,7 +4029,7 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
+                         
                             int K=nombensg("j9s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4072,25 +4042,16 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
-                            while(nb!=0&&s<nb)
+                             while(nb!=0&&s<nb)
                               {
-                                  
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
-                                    int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
-                                    String nom =GradeEns(lis[n]);
+                                     int nbsur=nbSurvillance(lis[n]);
+                                 =  String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                    {
-                                        System.out.println("d5el lhne");
-                                        if(nbsur<=max)
+                                    {  if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j9s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4107,7 +4068,7 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
+                               
                                 int K=nombensg("j9s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4122,20 +4083,18 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
-                                        int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                       
+                                    int nbsur=nbSurvillance(lis[n]);
+                                       
+                                    
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            {
+                                            if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
                                                             String update = "UPDATE planningsc SET`j9s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4156,7 +4115,7 @@ private int Salle2m(String Date,String S)
              }
                 else
             if(i==18)
-                {   System.out.println(G[i]);
+                {  
                     String hor=horaire1S1();
                     String []A=hor.split(" ");
       
@@ -4165,7 +4124,6 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
                             int K=nombensg("j10s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4178,25 +4136,19 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
-                            while(nb!=0&&s<nb)
+                           while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
+                                       
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j10s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4213,7 +4165,8 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
+                               
+                                
                                 int K=nombensg("j10s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4228,20 +4181,18 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
+                                        
+                                    
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
-                                        String nom =GradeEns(lis[n]);
+                                                                           String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            { 
+                                            if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
+                                                           
                                                             String update = "UPDATE planningsc SET`j10s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4263,7 +4214,8 @@ private int Salle2m(String Date,String S)
             else 
                 if(i==20)
                 {
-                    System.out.println(G[i]);
+                   
+                    
                     String hor=horaire1S1();
                     String []A=hor.split(" ");
       
@@ -4272,7 +4224,7 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
+                            
                             int K=nombensg("j11s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4285,25 +4237,17 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
                             while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
                                                 String update = "UPDATE planningsc SET j11s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4320,7 +4264,6 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
                                 int K=nombensg("j11s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4335,20 +4278,16 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
+                                       
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                      
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            {   if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
                                                             String update = "UPDATE planningsc SET`j11s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4368,8 +4307,7 @@ private int Salle2m(String Date,String S)
 
              }
                 else if(i==22)
-                    {System.out.println(G[i]);
-                    String hor=horaire1S1();
+                    {String hor=horaire1S1();
                     String []A=hor.split(" ");
       
                     int cop=1;
@@ -4377,7 +4315,7 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
+                     
                             int K=nombensg("j12s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4390,26 +4328,21 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
+                           
                             while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
+                                   
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
+                                  
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
-                                        if(nbsur<=max)
+                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
-                                                String update = "UPDATE planningsc SET j12s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
+                                                try{
+                                                    String update = "UPDATE planningsc SET j12s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
                                                 } catch (SQLException e)
@@ -4425,7 +4358,7 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
+                               
                                 int K=nombensg("j12s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4440,20 +4373,20 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
+                                        
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                       
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
+                                            { 
+                                            
                                                 if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
+                                                            
+                                                            
                                                             String update = "UPDATE planningsc SET`j12s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4473,7 +4406,8 @@ private int Salle2m(String Date,String S)
 
              }
                 else if(i==24)
-                    {System.out.println(G[i]);
+                    {
+                    
                     String hor=horaire1S1();
                     String []A=hor.split(" ");
       
@@ -4482,7 +4416,8 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
+                            
+                            
                             int K=nombensg("j13s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4495,25 +4430,25 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
+                       
+                            
                             while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
+                                 
+                                
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
+                                    
+                                
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
+                                       
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j13s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4529,9 +4464,7 @@ private int Salle2m(String Date,String S)
                               }
                         }else
                             if (A[cop].equals("S2"))
-                            {
-                                System.out.println("hana taw f 4"+ A[cop]);
-                                int K=nombensg("j13s2");  
+                            {int K=nombensg("j13s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
                                 int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4545,20 +4478,17 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
-                                        int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
-                                        String nom =GradeEns(lis[n]);
+                                    int nbsur=nbSurvillance(lis[n]);
+                                    
+                                    String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            { 
+                                            if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
+                                            
                                                             String update = "UPDATE planningsc SET`j13s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4578,7 +4508,8 @@ private int Salle2m(String Date,String S)
 
              }
                 else if(i==26)
-                    {System.out.println(G[i]);
+                    {
+                    
                     String hor=horaire1S1();
                     String []A=hor.split(" ");
       
@@ -4587,7 +4518,8 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
+                           
+                            
                             int K=nombensg("j14s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4600,25 +4532,21 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
+                        
                             while(nb!=0&&s<nb)
                               {
-                                  
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
-                                    int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
-                                    String nom =GradeEns(lis[n]);
+                            
+                                int nbsur=nbSurvillance(lis[n]);
+                                
+                                String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
+ 
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j2s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4635,7 +4563,8 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
+                                
+                                
                                 int K=nombensg("j14s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4650,20 +4579,19 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
+                                        
+                                    
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
-                                        String nom =GradeEns(lis[n]);
+                                    
+                                    String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            { 
+                                            if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
+                                            
                                                             String update = "UPDATE planningsc SET`j14s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4682,7 +4610,8 @@ private int Salle2m(String Date,String S)
                     }
              }
                 else if(i==28)
-                {                System.out.println(G[i]);
+                {              
+                    
                     String hor=horaire1S1();
                     String []A=hor.split(" ");
       
@@ -4691,7 +4620,8 @@ private int Salle2m(String Date,String S)
                     {
                         if(A[cop].equals("S1"))
                         {
-                            System.out.println("hana taw f 3"+ A[cop]);
+                          
+                            
                             int K=nombensg("j15s1");  
                             int nbsalle1=nombsalle(G[i+1],A[cop]);
                             int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4704,25 +4634,26 @@ private int Salle2m(String Date,String S)
                             int nombre=0,n=0;
                             int s=K+nombre;
                             int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
-                            System.out.println("les salle est"+nb);
-                            System.out.println("les ensginanats"+s);
-                            System.out.println("les ensginanats"+K);
+                            
+                            
                             while(nb!=0&&s<nb)
                               {
                                   
-                                    System.out.println("les salle réservee sont: "+nb);
-                                    System.out.println("les enseignatns y3esho"+s);
-                                    System.out.println(lis[n]);
+                                   
+                                
                                     int nbsur=nbSurvillance(lis[n]);
-                                    System.out.println(n);
+                        
+                                
                                     String nom =GradeEns(lis[n]);
                                     int max=maxsurgrade(nom);
                                     if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
                                     {
-                                        System.out.println("d5el lhne");
+                                       
+                                        
                                         if(nbsur<=max)
                                         {
-                                                try{System.out.println("9a3ed yt3ada");
+                                                try{
+                                                    
                                                 String update = "UPDATE planningsc SET j15s1='1'where nomcomplt  like '%"+lis[n]+"%' ";
                                                 pst = connection.prepareStatement(update);
                                                 pst.execute();
@@ -4739,7 +4670,8 @@ private int Salle2m(String Date,String S)
                         }else
                             if (A[cop].equals("S2"))
                             {
-                                System.out.println("hana taw f 4"+ A[cop]);
+                               
+                                
                                 int K=nombensg("j15s2");  
                                 int nbsalle1=nombsalle(G[i+1],A[cop]);
                                 int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4754,20 +4686,20 @@ private int Salle2m(String Date,String S)
                                 int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                                 while(nb!=0&&s1<=nb)
                                   {
-                                        System.out.println("les salle réservee sont: "+nb);
-                                        System.out.println("les enseignatns y3esho"+s1);
-                                        System.out.println(lis[n]);
+                                        
+                                    
                                         int nbsur=nbSurvillance(lis[n]);
-                                        System.out.println(n);
+                                        
+                                    
                                         String nom =GradeEns(lis[n]);
                                         int max=maxsurgrade(nom);
                                         if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                            { System.out.println("d5el lhne");
-                                                if(nbsur<=max)
+                                            {
+                                            if(nbsur<=max)
                                                     {
                                                         try
                                                         {
-                                                            System.out.println("9a3ed yt3ada");
+                                            
                                                             String update = "UPDATE planningsc SET`j15s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                             pst = connection.prepareStatement(update);
                                                             pst.execute();
@@ -4795,7 +4727,7 @@ private int Salle2m(String Date,String S)
  @FXML
     void demmarer(ActionEvent event) throws IOException {
         connection = handler.getConnection();
-        /**int i=entrejour();
+        int i=entrejour();
         if(i==0)
         {   Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Notification");
@@ -4825,7 +4757,7 @@ private int Salle2m(String Date,String S)
              {
                  e1.printStackTrace();
              }
-      /**  finally 
+        finally 
         {
                 try{
                       connection.close();
@@ -4838,9 +4770,9 @@ private int Salle2m(String Date,String S)
                     alert.setContentText("planning déjà crée ,Veuillez cliquer sur \"afficher\" pour afficher le planning ou bien sur\"supprimer\" pour démarrer un nouveau planning");
                     alert.showAndWait();
         
-    }*/
+    
         plannning1();
-      //PlanningSeance2();
+    PlanningSeance2();
      
     }
 
@@ -4868,13 +4800,10 @@ private int Salle2m(String Date,String S)
     void modifier2(ActionEvent event) {
         connection = handler.getConnection();
         String k= ensgdisp("Samedi");
-        System.out.println(k);
+    
         String [] h=k.split("  ");
         int i=0;
-        while(i<h.length)
-                {
-                    System.out.println(i+"  "+h[i]);i++;
-                }
+        
     }
 
     @FXML
@@ -4981,7 +4910,7 @@ private int Salle2m(String Date,String S)
         d.open();
         
         d.add(new Paragraph("AVIS AUX ENSEIGNANTS"));
-        d.add(new Paragraph("ECOLE SUPERIEURE DE L’ECONOMIE NUMERIQUE",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD,BaseColor.BLUE)));
+        d.add(new Paragraph("",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD,BaseColor.BLUE)));
         d.add(new Paragraph("  "));
         d.add(new Paragraph("                           PLANNING  DES  SURVEILLANCES  DES EXAMENS ",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD)));
         d.add(new Paragraph("                           "+new Date().toString()));
