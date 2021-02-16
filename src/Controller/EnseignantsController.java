@@ -89,7 +89,7 @@ public class EnseignantsController implements Initializable {
     private TableColumn<Enseignantfx, String> grd;
     
     private String setgradeens()
- {//connection = handler.getConnection();
+ 
      String gradee="";
     try {
             pst = connection.prepareStatement("SELECT nomgrade FROM grade");
@@ -97,7 +97,7 @@ public class EnseignantsController implements Initializable {
             while(rs.next())
             {
                 gradee=gradee+" "+rs.getString(1);
-             System.out.println(gradee);
+            
             }
         
         
@@ -117,7 +117,7 @@ public class EnseignantsController implements Initializable {
             while(rs.next())
             {
                 id=rs.getInt(1);
-             System.out.println(id);
+            
             }
         
         
@@ -142,11 +142,7 @@ public class EnseignantsController implements Initializable {
                 i+=1; 
                 String []value =line.split("  ");
                 String[] G =S.split(" ");
-                for(String item : value)
-                {
-                System.out.print(item);
-                System.out.println(i);
-                }
+               
        String sql="INSERT INTO enseignant(id,nomcomplt,grade) values ("+i+",'"+value[0]+"','"+G[1]+"')";
                     pst = connection.prepareStatement(sql);
                     pst.execute();
