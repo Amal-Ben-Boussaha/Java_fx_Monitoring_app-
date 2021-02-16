@@ -162,7 +162,8 @@ public class PlanningController implements Initializable {
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(id);
+             
+               
             }
         
         
@@ -413,7 +414,7 @@ public class PlanningController implements Initializable {
             while(rs.next())
             {
                 day10=day9+" "+rs.getString(1);
-                System.out.println(day10);
+               
             }} catch (SQLException ex) 
         {
             ex.printStackTrace();
@@ -573,7 +574,7 @@ String M="";
     else if(!M.equals("0")&&!T.equals("0") )
             {
                 M=M+"  "+T;
-                System.out.println(M);
+               
             }
     else if(!T.equals("")&&M.equals("0"))
     {
@@ -581,7 +582,7 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println("1"+M);
+   
     return M;
 }     
 private String Matieres2t(String mat,String S)
@@ -601,7 +602,7 @@ String M="";
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-    System.out.println(M);
+    
     return M;
 }      
 private String Matieres2e(String mat,String S)
@@ -636,7 +637,7 @@ String M="";
     }
     else 
     { M=M;}
-    System.out.println(M);
+    
     return M;
 }   
 private String ListeMAtEns(String L,String Hor)
@@ -772,7 +773,7 @@ private String Matieres1m(String mat,String S)
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-    System.out.println("1"+M);
+    
     return M;}
 private String Matieresw1(String mat,String S)
 {
@@ -971,7 +972,7 @@ if(!L.equals("0"))
                 pst = connection.prepareStatement("SELECT matieres_vic from vic2 where date_vic ='"+mat+"'and horaire_vic='"+S+"' ");
                  rs = pst.executeQuery();
                  while(rs.next())
-                {System.out.println(L);
+                {
                    M=L+"  "+rs.getString(1);
                 }
                  } catch (SQLException ex) {
@@ -991,7 +992,7 @@ else{
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }}
-System.out.println("4"+M);
+
     return M; 
 }      
 
@@ -1205,7 +1206,7 @@ private void plannningExamen()
                                String[] E =Ens.split("  ");
                                 while(f1<E.length)
                                         {
-                                            System.out.println(E[f1]);
+                                            
                                             String nom =GradeEns(E[f1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
@@ -1379,7 +1380,7 @@ private void plannningExamen()
                           String nom =GradeEns(E[a]);
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {try
-                                {System.out.println("CV T3ADA");
+                                {
                                     String update = "UPDATE planning SET `j4s1`='1', `j4s2`='1' where nomcomplt like '%"+E[a]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -1933,7 +1934,7 @@ private void plannningExamen()
                                String[] E =Ens.split("  ");
                                         while(h1<E.length)
                                         {
-                                            System.out.println(E[h1]);
+                                            
                                             String nom =GradeEns(E[h1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
@@ -1980,7 +1981,7 @@ private void plannningExamen()
                            h3++;
                         }else
                             {try
-                                    {System.out.println("CV T3ADA");
+                                    {
                                         String update = "UPDATE planning SET j9s3='1' where nomcomplt like '%"+E[h3]+"%' ";
                            
                                         pst = connection.prepareStatement(update);
@@ -1999,7 +2000,7 @@ private void plannningExamen()
                     else
                         
                    if(i==19)
-                   {System.out.println(G[i]);
+                   {
                String S1= horaire1S1();
                String[] A =S1.split(" ");
                int compteur=1;
@@ -2011,7 +2012,7 @@ private void plannningExamen()
                      {  String nom =GradeEns(E[y]);
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {try
-                                {System.out.println("CV T3ADA");
+                                {
                                     String update = "UPDATE planning SET `j10s1`='1', `j10s2`='1' where nomcomplt like '%"+E[y]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -2021,7 +2022,7 @@ private void plannningExamen()
                                              }
                            y++;
                         }else{try
-                                    {System.out.println("CV T3ADA");
+                                    {
                                         String update = "UPDATE planning SET j10s1='1' where nomcomplt like '%"+E[y]+"%' ";
                            
                                         pst = connection.prepareStatement(update);
@@ -2037,12 +2038,12 @@ private void plannningExamen()
                      
                                         while(y1<E.length)
                                         {
-                                            System.out.println(E[y1]);
+                                            
                                             String nom =GradeEns(E[y1]);
                                             if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planning SET `j10s1`='1', `j10s2`='1' where nomcomplt like '%"+E[y1]+"%' ";
                                                         pst = connection.prepareStatement(update);
                                                         pst.execute();
@@ -2054,7 +2055,7 @@ private void plannningExamen()
                                             else
                                                 {
                                                     try
-                                                    {System.out.println("CV T3ADA");
+                                                    {
                                                         String update = "UPDATE planningsc SET j10s2='1' where nomcomplt like '%"+E[y1]+"%' ";
                            
                                                         pst = connection.prepareStatement(update);
@@ -2073,7 +2074,7 @@ private void plannningExamen()
                      {  String nom =GradeEns(E[y3]);
                         if(!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences"))
                         {try
-                                {System.out.println("CV T3ADA");
+                                {
                                     String update = "UPDATE planning SET `j10s2`='1', `j10s3`='1' where nomcomplt like '%"+E[y3]+"%' ";
                                     pst = connection.prepareStatement(update);
                                     pst.execute();
@@ -2083,7 +2084,7 @@ private void plannningExamen()
                                              }
                            y3++;
                         }else{try
-                                    {System.out.println("CV T3ADA");
+                                    {
                                         String update = "UPDATE planning SET j10s3='1' where nomcomplt like '%"+E[y3]+"%' ";
                            
                                         pst = connection.prepareStatement(update);
@@ -2194,7 +2195,7 @@ private void plannningExamen()
     }
     else i=4;   
    }else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private String Salle1T(String date)
@@ -2297,7 +2298,7 @@ private void plannningExamen()
         {i=i+2;}   
    }
    else{ i=0;}
-   System.out.println(i);
+  
    return i;
    }
    private int nombensg(String d)
@@ -2421,7 +2422,7 @@ return i;
    } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-   System.out.println(i);
+   
    return i;
    }
    private String S2T2(String date,String S)
@@ -2442,7 +2443,7 @@ return i;
    } catch (SQLException ex) {
                     ex.printStackTrace();
                  }
- System.out.println(z);             
+  
    return z;
    }
    private String S3T1(String date,String S)
@@ -2570,8 +2571,7 @@ return i;
    {int i;
    int j= nb(Date,S),d=nb2(Date,S),e=nb3(Date,S);
    i=j+d+e;
-   System.out.println("les salle sont :"+i);
-   return i;
+      return i;
    }
    private int nb(String Date,String S)
    {int i;
@@ -2583,7 +2583,7 @@ return i;
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int nb2(String Date,String S)
@@ -2596,7 +2596,7 @@ return i;
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+  
    return i;
    }
    private int nb3(String Date,String S)
@@ -2611,7 +2611,7 @@ return i;
     
    }
    else i=0;
-   System.out.println(i);
+   
    return i;
    }
     private int nb3l(String Date,String S)
@@ -2624,7 +2624,7 @@ return i;
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int nb31(String Date,String S)
@@ -2637,7 +2637,7 @@ return i;
        {i=2;}
     
    }else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int nb32(String Date,String S)
@@ -2652,14 +2652,14 @@ return i;
     
    }
    else i=0;
-   System.out.println(i);
+   
    return i;
    }
    private int Salle3eme(String Date,String S)
    {int i;
    int j= nb3l(Date,S),d=nb31(Date,S),e=nb32(Date,S);
    i=j+d+e;
-   System.out.println(i);
+   
    return i;
    }
    private int nbSurvillance(String nomc)
@@ -2680,7 +2680,7 @@ return i;
                 e1.printStackTrace();
             }
 i = Integer.parseInt(N);
-System.out.println("il asteth il fleni haw 9adech 3ase"+i);
+
 return i;
 }
 private int maxsurgrade(String grade)
@@ -2698,7 +2698,7 @@ try {
                     ex.printStackTrace();
                 }
 i = Integer.parseInt(L);
-System.out.println(" le grade max est "+i);   
+  
 return i;
 }
 private int minsurgrade(String grade)
@@ -2717,7 +2717,7 @@ try {
                     ex.printStackTrace();
                 }
 i = Integer.parseInt(L);
-System.out.println("le grade min"+i);   
+
 return i;
 }
 private boolean existe(String Jour,String nom)
@@ -2893,7 +2893,7 @@ private int exp(String Jour,String nom)
    
    int j= S1Mecom(Date,S),d=S1Mbds(Date,S),e=S1Wi(Date,S),c=S1vic(Date,S);
    i=j+d+e+c;
-   System.out.println(i);
+   
    return i;
    }
    
@@ -2901,7 +2901,7 @@ private int Salle2m(String Date,String S)
    {int i;
    int j= S2Mecom(Date,S),d=S2Mbds(Date,S),e=S2wi(Date,S),c=S2vic(Date,S);
    i=j+d+e+c;
-   System.out.println(i);
+   
    return i;
    }
  private String SalleDisponibles(String date,String S)
@@ -3000,7 +3000,7 @@ private int Salle2m(String Date,String S)
     }
     else i=4;   
    }else i=0;
-   System.out.println("les salle sont"+i);
+   
    return i;
    }
  private String Salle1T(String date,String S)
@@ -3103,7 +3103,7 @@ private int Salle2m(String Date,String S)
         {i=i+2;}   
    }
    else{ i=0;}
-   System.out.println("les salle sont"+i);
+   
    return i;
    }
    
@@ -3114,7 +3114,7 @@ private void PlanningDisponibilites()
   while(i<=G.length)
         {
             if(i==0)
-            { System.out.println(G[i]);
+            {
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -3122,7 +3122,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {  
                         int K=nombensg("j1s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3137,22 +3137,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j1s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j1s3",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j1s1='1',`j1s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3170,7 +3168,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                       
                         int K=nombensg("j1s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3185,22 +3183,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j1s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j1s3",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j1s1='1',`j1s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3218,7 +3214,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                           
                         int K=nombensg("j1s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3233,9 +3229,7 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {   
-                                System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
+                                
                                   int nbsur=nbSurvillance(lis[n]);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
@@ -3243,11 +3237,11 @@ private void PlanningDisponibilites()
                                  boolean SS=existe("j1s1",lis[n]);
                                  boolean SSS=existe("j1s2",lis[n]);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
-                                  System.out.println("cv yt3ada");
+                                 
                                   
                                         String update = "UPDATE planning SET j1s2='1',`j1s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3268,7 +3262,7 @@ private void PlanningDisponibilites()
                     } 
  else 
             if(i==2)
-    {  System.out.println(G[i]);
+    {  
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -3276,7 +3270,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {   
                         int K=nombensg("j2s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3291,22 +3285,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j2s2",lis[n]);
-                                 System.out.println(SS);
+                                 
                                  boolean SSS=existe("j2s3",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j2s1='1',`j2s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3324,7 +3316,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                       
                         int K=nombensg("j2s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3339,22 +3331,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j2s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j2s3",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j2s1='1',`j2s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3372,7 +3362,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                           
                         int K=nombensg("j2s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3387,22 +3377,19 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j2s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j2s2",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j2s2='1',`j2s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3423,7 +3410,7 @@ private void PlanningDisponibilites()
                     }
   else
         if(i==4)
-       {System.out.println(G[i]);
+       {
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -3431,7 +3418,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {  
                         int K=nombensg("j3s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3446,22 +3433,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j3s2",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j3s3",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j3s1='1',`j3s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3479,7 +3464,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                       
                         int K=nombensg("j3s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3494,22 +3479,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j3s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j3s3",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j3s1='1',`j3s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3527,7 +3510,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                            
                         int K=nombensg("j3s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3542,22 +3525,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j3s1",lis[n]);
-                                 System.out.println(SS);
+                                 
                                  boolean SSS=existe("j3s2",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j3s2='1',`j3s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3577,7 +3558,7 @@ private void PlanningDisponibilites()
                     cop++;}
                     }else
             if(i==6)
-        {System.out.println(G[i]);
+        {
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -3585,7 +3566,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {  
                         int K=nombensg("j4s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3600,22 +3581,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j1s1",lis[n]);
-                                 System.out.println(SS);
+                                 
                                  boolean SSS=existe("j1s3",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j4s1='1',`j4s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3633,7 +3612,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                        
                         int K=nombensg("j4s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3648,22 +3627,19 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j4s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j4s3",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j4s1='1',`j4s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3681,7 +3657,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                            
                         int K=nombensg("j4s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3696,23 +3672,15 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j4s1",lis[n]);
-                                 System.out.println(SS);
                                  boolean SSS=existe("j4s2",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
-                                     if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {   if((SS==false&& SSS==false)&& nbsur<=max)
+                                 {  try{
                                                          String update = "UPDATE planning SET j4s2='1',`j4s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -3731,7 +3699,7 @@ private void PlanningDisponibilites()
                     cop++;}
                     }
         else if(i==8)
-        {System.out.println(G[i]);
+        {
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -3739,7 +3707,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {  
                         int K=nombensg("j5s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3754,23 +3722,18 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j5s2",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j5s3",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
-                                     if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {   if((SS==false&& SSS==false)&& nbsur<=max)
+                                 {  try{
                                                          String update = "UPDATE planning SET j5s1='1',`j5s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -3787,7 +3750,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                        
                         int K=nombensg("j5s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3802,22 +3765,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j5s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j5s3",lis[n]);
-                                 System.out.println(SSS);
+                            
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                     {
                                     try{
                                                          String update = "UPDATE planning SET j5s1='1',`j5s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -3835,7 +3796,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                           
                         int K=nombensg("j5s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3850,23 +3811,17 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j5s1",lis[n]);
-                                 System.out.println(SS);
                                  boolean SSS=existe("j5s2",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
-                                     if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {   if((SS==false&& SSS==false)&& nbsur<=max)
+                                 {  try{
                                                          String update = "UPDATE planning SET j5s2='1',`j5s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -3886,16 +3841,14 @@ private void PlanningDisponibilites()
                     }
         else 
             if(i==10)
-        {System.out.println(G[i]);
-                String hor=horaire1S1();
+        {       String hor=horaire1S1();
                 String []A=hor.split(" ");
       
                 int cop=1;
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
-                        int K=nombensg("j6s1");  
+                    {   int K=nombensg("j6s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
                         int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -3909,23 +3862,15 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j6s2",lis[n]);
-                                 System.out.println(SS);
                                  boolean SSS=existe("j6s3",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
-                                     if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {   if((SS==false&& SSS==false)&& nbsur<=max)
+                                 {  try{
                                                          String update = "UPDATE planning SET j6s1='1',`j6s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -3942,7 +3887,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                        
                         int K=nombensg("j6s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -3957,23 +3902,21 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j6s1",lis[n]);
-                                 System.out.println(SS);
+                                 
                                  boolean SSS=existe("j6s3",lis[n]);
-                                 System.out.println(SSS);
+                               
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {
+                                         try{
                                                          String update = "UPDATE planning SET j6s1='1',`j6s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -3990,7 +3933,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                            
                         int K=nombensg("j6s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4005,22 +3948,19 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                 System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j6s1",lis[n]);
-                                 System.out.println(SS);
+                              
                                  boolean SSS=existe("j6s2",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j6s2='1',`j6s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4040,7 +3980,7 @@ private void PlanningDisponibilites()
                     cop++;}
                     }   else
                 if(i==12)
-        {System.out.println(G[i]);
+        {
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -4048,7 +3988,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {   
                         int K=nombensg("j7s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4063,22 +4003,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                              
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j7s2",lis[n]);
-                                 System.out.println(SS);
+                              
                                  boolean SSS=existe("j7s3",lis[n]);
-                                 System.out.println(SSS);
+                               
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j7s1='1',`j7s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4096,7 +4034,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                      
                         int K=nombensg("j7s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4111,22 +4049,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j7s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j7s3",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j7s1='1',`j7s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4144,8 +4080,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
-                        int K=nombensg("j7s3");  
+                            int K=nombensg("j7s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
                         int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4159,23 +4094,15 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j7s1",lis[n]);
-                                 System.out.println(SS);
                                  boolean SSS=existe("j7s2",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
-                                     if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {   if((SS==false&& SSS==false)&& nbsur<=max)
+                                 {  try{
                                                          String update = "UPDATE planning SET j7s2='1',`j7s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -4194,7 +4121,7 @@ private void PlanningDisponibilites()
                     cop++;}}
                     
         else if(i==14)
-        {System.out.println(G[i]);
+        {
                 String hor=horaire1S1();
                 String []A=hor.split(" ");
       
@@ -4202,8 +4129,7 @@ private void PlanningDisponibilites()
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
-                        int K=nombensg("j8s1");  
+                    {   int K=nombensg("j8s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
                         int nbsalle3=Salle2eme(G[i+1],A[cop]);
@@ -4217,23 +4143,15 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j8s2",lis[n]);
-                                 System.out.println(SS);
                                  boolean SSS=existe("j8s3",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
-                                     if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {  if((SS==false&& SSS==false)&& nbsur<=max)
+                                 {  try{
                                                          String update = "UPDATE planning SET j8s1='1',`j8s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -4250,7 +4168,6 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
                         int K=nombensg("j8s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4265,23 +4182,21 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                             
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j8s2",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j8s3",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {
+                                         try{
                                                          String update = "UPDATE planning SET j8s1='1',`j8s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -4298,7 +4213,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                            
                         int K=nombensg("j8s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4313,22 +4228,18 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j8s1",lis[n]);
-                                 System.out.println(SS);
+                                 
                                  boolean SSS=existe("j8s2",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j8s2='1',`j8s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4348,15 +4259,15 @@ private void PlanningDisponibilites()
                     cop++;}
                     } 
         else if(i==16)
-        {System.out.println(G[i]);
-                String hor=horaire1S1();
+        {
+            String hor=horaire1S1();
                 String []A=hor.split(" ");
       
                 int cop=1;
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {
                         int K=nombensg("j9s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4371,23 +4282,18 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
-                                 String nom =GradeEns(lis[n]);
+                                
+                            String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j9s2",lis[n]);
-                                 System.out.println(SS);
                                  boolean SSS=existe("j9s3",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {
+                                         try{
                                                          String update = "UPDATE planning SET j9s1='1',`j9s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -4404,7 +4310,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                       
                         int K=nombensg("j9s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4419,23 +4325,19 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j9s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j9s3",lis[n]);
-                                 System.out.println(SSS);
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {
+                                         try{
                                                          String update = "UPDATE planning SET j9s1='1',`j9s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -4452,7 +4354,6 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
                         int K=nombensg("j9s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4467,22 +4368,20 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                        
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j9s1",lis[n]);
-                                 System.out.println(SS);
+                              
                                  boolean SSS=existe("j9s2",lis[n]);
-                                 System.out.println(SSS);
+                                
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
                                     try{
                                                          String update = "UPDATE planning SET j9s2='1',`j9s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4502,15 +4401,14 @@ private void PlanningDisponibilites()
                     cop++;}
                     }
         else if(i==18)
-        {System.out.println(G[i]);
-                String hor=horaire1S1();
+        {       String hor=horaire1S1();
                 String []A=hor.split(" ");
       
                 int cop=1;
                 while(cop<A.length)
                 {
                     if(A[cop].equals("S1"))
-                    {   System.out.println(A[cop]);
+                    {  
                         int K=nombensg("j10s1");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4525,22 +4423,23 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s);
-                                 System.out.println(lis[n]);
+                                    
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j10s2",lis[n]);
-                                 System.out.println(SS);
+                                 
+                            
                                  boolean SSS=existe("j10s3",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
+                                     
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
+                                         
                                     try{
                                                          String update = "UPDATE planning SET j10s1='1',`j10s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4558,7 +4457,7 @@ private void PlanningDisponibilites()
                                 }
                     else if(A[cop].equals("S2"))
                     {
-                        System.out.println(A[cop]);
+                        
                         int K=nombensg("j10s2");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4573,23 +4472,22 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s1<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s1);
-                                 System.out.println(lis[n]);
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j10s1",lis[n]);
-                                 System.out.println(SS);
+                              
+                            
                                  boolean SSS=existe("j10s3",lis[n]);
-                                 System.out.println(SSS);
+                                 
+                            
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 { 
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
-                                    try{
+                                 {
+                                         try{
                                                          String update = "UPDATE planning SET j10s1='1',`j10s2`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
                                                          pst.execute();
@@ -4606,7 +4504,7 @@ private void PlanningDisponibilites()
                                 }else
                         if(A[cop].equals("S3"))
                         {
-                            System.out.println(A[cop]);
+                            
                         int K=nombensg("j10s3");  
                         int nbsalle1=nombsalle(G[i+1],A[cop]);
                         int nbsalle2=nombsalle1(G[i+1],A[cop]);
@@ -4621,22 +4519,22 @@ private void PlanningDisponibilites()
                         int nb=(nbsalle1+nbsalle2+nbsalle3+nbsalle4+nbsalle5+nbsalle6)*2;
                         while(nb!=0&&s3<nb)
                             {
-                                    System.out.println("les salle réservee sont: "+nb);
-                                 System.out.println("les enseignatns y3esho"+s3);
-                                 System.out.println(lis[n]);
+                                   
                                  int nbsur=nbSurvillance(lis[n]);
-                                 System.out.println(n);
+                                 
                                  String nom =GradeEns(lis[n]);
                                  int max=maxsurgrade(nom);
                                  int min=minsurgrade(nom);
                                  boolean SS=existe("j10s1",lis[n]);
-                                 System.out.println(SS);
+                                
                                  boolean SSS=existe("j10s2",lis[n]);
-                                 System.out.println(SSS);
+                                 
                                  if((!nom.equals("Professeur")&&!nom.equals("Vacataire")&&!nom.equals("Maitre de conférences")))
-                                 { System.out.println("d5el lhne");
+                                 {
+                                     
                                      if((SS==false&& SSS==false)&& nbsur<=max)
-                                 {System.out.println("9a3ed yt3ada");
+                                 {
+                                         
                                     try{
                                                          String update = "UPDATE planning SET j10s2='1',`j10s3`='1' where nomcomplt  like '%"+lis[n]+"%' ";
                                                          pst = connection.prepareStatement(update);
@@ -4669,7 +4567,7 @@ private void PlanningDisponibilites()
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(i);
+            
             }
         
         
@@ -4687,7 +4585,7 @@ private void PlanningDisponibilites()
             while(rs.next())
             {
                 i=rs.getInt(1);
-             System.out.println(i);
+            
             }
         
         
@@ -4709,7 +4607,7 @@ String l="";
             while(rs.next())
             {
             l=rs.getString(1);
-             System.out.println(l);
+             
             }
         
         
@@ -4861,8 +4759,8 @@ i++;}
         pt.setWidthPercentage(100);
         pt.setHorizontalAlignment(100);
         d.open();
-        d.add(new Paragraph("AVIS AUX ENSEIGNANTS"));
-        d.add(new Paragraph("ECOLE SUPERIEURE DE L’ECONOMIE NUMERIQUE",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD,BaseColor.BLUE)));
+        d.add(new Paragraph(""));
+        d.add(new Paragraph("",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD,BaseColor.BLUE)));
         d.add(new Paragraph("  "));
         d.add(new Paragraph("                           PLANNING  DES  SURVEILLANCES  DES EXAMENS",FontFactory.getFont(FontFactory.TIMES_BOLD,18,Font.BOLD)));
         d.add(new Paragraph("                           "+new Date().toString()));
